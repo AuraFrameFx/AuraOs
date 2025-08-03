@@ -8,7 +8,7 @@ plugins {
     id("org.jetbrains.kotlin.kapt")
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.compose)
-    id("org.openapi.generator") version "7.4.0"
+    id("org.openapi.generator") version "7.14.0"
 }
 
 android {
