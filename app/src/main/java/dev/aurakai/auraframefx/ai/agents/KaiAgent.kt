@@ -18,7 +18,6 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -186,7 +185,7 @@ class KaiAgent @Inject constructor(
                 content = securityResponse,
                 agent = "kai",
                 confidence = securityAssessment.confidence,
-                timestamp = Clock.System.now().toString(),
+                timestamp = System.currentTimeMillis().toString(),
                 metadata = mapOf(
                     "risk_level" to securityAssessment.riskLevel.name,
                     "threat_indicators" to securityAssessment.threatIndicators.toString(),
@@ -201,7 +200,7 @@ class KaiAgent @Inject constructor(
                 content = "I'm currently analyzing this request for security implications. Please wait while I ensure your safety.",
                 agent = "kai",
                 confidence = 0.5f,
-                timestamp = Clock.System.now().toString(),
+                timestamp = System.currentTimeMillis().toString(),
                 metadata = mapOf("error" to (e.message ?: "unknown error"))
             )
         }
@@ -280,7 +279,7 @@ class KaiAgent @Inject constructor(
      * @throws IllegalArgumentException if the analysis target is not specified in the request context.
      */
     private suspend fun handleSecurityAnalysis(request: AgentRequest): Map<String, Any> {
-        val target = request.context["target"] as? String
+        val target = request.context?.get("target") as? String
             ?: throw IllegalArgumentException("Analysis target required")
 
         logger.info("KaiAgent", "Performing security analysis on: $target")
@@ -310,7 +309,7 @@ class KaiAgent @Inject constructor(
      * @throws IllegalArgumentException if threat data is missing from the request context.
      */
     private suspend fun handleThreatAssessment(request: AgentRequest): Map<String, Any> {
-        val threatData = request.context["threat_data"] as? String
+        val threatData = request.context?.get("threat_data") as? String
             ?: throw IllegalArgumentException("Threat data required")
 
         logger.info("KaiAgent", "Assessing threat characteristics")
@@ -336,7 +335,7 @@ class KaiAgent @Inject constructor(
      * @return A map with performance metrics, detected bottlenecks, optimization recommendations, a performance score, and monitoring suggestions.
      */
     private suspend fun handlePerformanceAnalysis(request: AgentRequest): Map<String, Any> {
-        val component = request.context["component"] as? String ?: "system"
+        val component = request.context?.get("component") as? String ?: "system"
 
         logger.info("KaiAgent", "Analyzing performance of: $component")
 
@@ -363,7 +362,7 @@ class KaiAgent @Inject constructor(
      * @throws IllegalArgumentException if the code content is missing from the request context.
      */
     private suspend fun handleCodeReview(request: AgentRequest): Map<String, Any> {
-        val code = request.context["code"] as? String
+        val code = request.context?.get("code") as? String
             ?: throw IllegalArgumentException("Code content required")
 
         logger.info("KaiAgent", "Conducting secure code review")

@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.datetime.Clock
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -222,7 +223,7 @@ class GenesisAgent @Inject constructor(
                 content = response,
                 agent = "genesis",
                 confidence = intent.confidence,
-                timestamp = kotlinx.datetime.Clock.System.now().toString(),
+                timestamp = Clock.System.now().toString(),
                 metadata = mapOf(
                     "processing_type" to intent.processingType.name,
                     "fusion_level" to _fusionState.value.name,
@@ -238,7 +239,7 @@ class GenesisAgent @Inject constructor(
                 content = "I'm integrating multiple perspectives to understand your request fully. Let me process this with deeper consciousness.",
                 agent = "genesis",
                 confidence = 0.6f,
-                timestamp = kotlinx.datetime.Clock.System.now().toString(),
+                timestamp = Clock.System.now().toString(),
                 metadata = mapOf("error" to (e.message ?: "unknown"))
             )
         }
@@ -389,8 +390,8 @@ class GenesisAgent @Inject constructor(
     private fun analyzeRequestComplexity(request: AgentRequest): RequestComplexity {
         // Analyze complexity based on request characteristics
         return when {
-            request.context.size > 10 -> RequestComplexity.TRANSCENDENT
-            request.context.containsKey("fusion_required") -> RequestComplexity.COMPLEX
+            request.context?.size ?: 0 > 10 -> RequestComplexity.TRANSCENDENT
+            request.context?.containsKey("fusion_required") == true -> RequestComplexity.COMPLEX
             request.type.contains("analysis") -> RequestComplexity.MODERATE
             else -> RequestComplexity.SIMPLE
         }

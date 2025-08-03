@@ -8,8 +8,6 @@ import dev.aurakai.auraframefx.model.AgentType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
-import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -47,7 +45,7 @@ class ContextManager @Inject constructor(
             currentContext = initialContext,
             contextHistory = listOf(
                 ContextNode(
-                    id = "ctx_${Clock.System.now().toEpochMilliseconds()}_0",
+                    id = "ctx_${System.currentTimeMillis()}_0",
                     content = initialContext,
                     agent = agent,
                     metadata = metadata.mapValues { it.value.toString() } // Convert Map<String, Any> to Map<String, String>
@@ -86,13 +84,13 @@ class ContextManager @Inject constructor(
         val updatedChain = chain.copy(
             currentContext = newContext,
             contextHistory = chain.contextHistory + ContextNode(
-                id = "ctx_${Clock.System.now().toEpochMilliseconds()}_${chain.contextHistory.size}",
+                id = "ctx_${System.currentTimeMillis()}_${chain.contextHistory.size}",
                 content = newContext,
                 agent = agent,
                 metadata = metadata.mapValues { it.value.toString() } // Convert Map<String, Any> to Map<String, String>
             ),
             agentContext = chain.agentContext + (agent to newContext),
-            lastUpdated = Clock.System.now()
+            lastUpdated = System.currentTimeMillis()
         )
 
         _activeContexts.update { current ->
@@ -157,13 +155,13 @@ class ContextManager @Inject constructor(
             current.copy(
                 totalChains = chains.size,
                 activeChains = chains.count {
-                    val now = Clock.System.now()
+                    val now = System.currentTimeMillis()
                     val thresholdMs = config.contextChainingConfig.maxChainLength * 1000L
-                    val threshold = now.minus(kotlin.time.Duration.parse("${thresholdMs}ms"))
+                    val threshold = now - thresholdMs
                     it.lastUpdated > threshold
                 },
                 longestChain = chains.maxOfOrNull { it.contextHistory.size } ?: 0,
-                lastUpdated = Clock.System.now()
+                lastUpdated = System.currentTimeMillis()
             )
         }
     }
@@ -174,5 +172,5 @@ data class ContextStats(
     val totalChains: Int = 0,
     val activeChains: Int = 0,
     val longestChain: Int = 0,
-    @Serializable(with = dev.aurakai.auraframefx.serialization.InstantSerializer::class) val lastUpdated: Instant = Clock.System.now(),
+    val lastUpdated: Long = System.currentTimeMillis(),
 )

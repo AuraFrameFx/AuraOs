@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dev.aurakai.auraframefx.ipc.IAuraDriveService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -28,10 +29,10 @@ class OracleDriveControlViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
 ) : ViewModel() {
 
-    private val tag = "OracleDriveVM"
+    private val TAG = "OracleDriveVM"
 
     // Service connection state
-    private var auraDriveService: dev.aurakai.auraframefx.ipc.IAuraDriveService? = null
+    private var auraDriveService: IAuraDriveService? = null
     private var isBound = false
 
     // UI State
@@ -63,7 +64,7 @@ class OracleDriveControlViewModel @Inject constructor(
          */
         override fun onServiceConnected(className: ComponentName, service: IBinder) {
             Log.d(TAG, "Service connected")
-            auraDriveService = dev.aurakai.auraframefx.ipc.IAuraDriveService.Stub.asInterface(service)
+            auraDriveService = IAuraDriveService.Stub.asInterface(service)
             isBound = true
             _isServiceConnected.value = true
             refreshStatus()
