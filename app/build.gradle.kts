@@ -169,5 +169,5 @@ dependencies {
     implementation(files("${project.rootDir}/Libs/api-82.jar"))
     implementation(files("${project.rootDir}/Libs/api-82-sources.jar"))
     // Dokka for documentation
-    implementation("org.openapitools:openapi-generator-gradle-plugin:7.4.0")
+    implementation("org.openapitools:openapi-generator-gradle-plugin:7.14.0")
 }
