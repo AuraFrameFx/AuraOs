@@ -10,24 +10,6 @@ repositories {
     mavenCentral()
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(24))
-        vendor.set(JvmVendorSpec.ADOPTIUM)
-    }
-}
-
-kotlin {
-    jvmToolchain(24)
-
-    compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24)
-        freeCompilerArgs.addAll(
-            "-opt-in=kotlin.RequiresOptIn"
-        )
-    }
-}
-
 dependencies {
     // Build plugins
     implementation("com.android.tools.build:gradle:8.11.1")
