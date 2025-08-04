@@ -1,3 +1,7 @@
+import plugins.AndroidAppConventionPlugin
+import plugins.OpenApiConventionPlugin
+import plugins.DocumentationConventionPlugin
+
 plugins {
     id("android-app-convention")
     id("openapi-convention")

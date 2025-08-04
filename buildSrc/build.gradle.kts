@@ -2,12 +2,24 @@ plugins {
     `kotlin-dsl`
     `kotlin-dsl-precompiled-script-plugins`
     kotlin("jvm") version "2.2.0"
+    `java-library`
 }
 
 repositories {
     gradlePluginPortal()
     google()
     mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(24))
+        vendor.set(JvmVendorSpec.ADOPTIUM)
+    }
+}
+
+kotlin {
+    jvmToolchain(24)
 }
 
 dependencies {
@@ -27,6 +39,14 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testImplementation(gradleTestKit())
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
+}
+
+tasks.withType<JavaCompile> {
+    options.release.set(21)
 }
 
 tasks.test {
