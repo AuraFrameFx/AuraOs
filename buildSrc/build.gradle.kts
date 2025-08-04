@@ -44,7 +44,6 @@ dependencies {
     implementation("org.openapi.generator:openapi-generator-gradle-plugin:7.14.0")
 
     // C++ NDK Native Support - WAS MISSING
-    implementation("com.android.tools.build:gradle:8.12.0") // Contains NDK support
 
     // Serialization
     implementation("org.jetbrains.kotlin:kotlin-serialization:2.2.0")
