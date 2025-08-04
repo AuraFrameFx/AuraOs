@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "dev.aurakai.auraframefx.app-mergeReleaseResources-69:/values-v28/values-v28.xml",
+            "map": [
+                {
+                    "source": "C:\\Android Tools\\zulu24.32.13-ca-jdk24.0.2-win_x64\\caches\\9.0.0\\transforms\\1ebef5deb543d9e67b6a226deeb2f43e\\transformed\\appcompat-1.7.1\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,397",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,392,584"
+                    }
+                }
+            ]
+        }
+    ]
+}
