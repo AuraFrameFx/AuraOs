@@ -30,10 +30,21 @@ dependencyResolutionManagement {
 
 rootProject.name = "Genesis-Os"
 
-// Include only app module for testing
 include(":app")
-// include(":core-module")
-// include(":feature-module")
-// include(":datavein-oracle-drive")
-// include(":datavein-oracle-native")
-// include(":secure-comm")
+include(":core-module")
+include(":feature-module")
+include(":datavein-oracle-drive")
+include(":datavein-oracle-native")
+include(":secure-comm")
+include(":collab-canvas")
+include(":colorblendr")
+include(":jvm-test")
+include(":module-a")
+include(":module-b")
+include(":module-c")
+include(":module-d")
+include(":module-e")
+include(":module-f")
+include(":oracle-drive-integration")
+include(":oracledrive-integration")
+include(":sandbox-ui")

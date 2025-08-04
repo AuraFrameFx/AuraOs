@@ -1,14 +1,14 @@
 plugins {
     `kotlin-dsl`
-    `kotlin-dsl-precompiled-script-plugins`
-    kotlin("jvm") version "2.2.0"
-    `java-library`
 }
 
 repositories {
-    gradlePluginPortal()
     google()
     mavenCentral()
+    gradlePluginPortal()
+    // Bleeding edge repositories
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
+    maven("https://androidx.dev/storage/compose-compiler/repository/")
 }
 
 java {
@@ -23,38 +23,32 @@ kotlin {
 }
 
 dependencies {
-    // Build plugins
-    implementation("com.android.tools.build:gradle:8.11.1")
+    // Core Gradle plugins
+    implementation("com.android.tools.build:gradle:8.12.0")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.0")
-    implementation("com.google.devtools.ksp:symbol-processing-gradle-plugin:2.2.0-2.0.2")
+
+    // KSP 2 for Kotlin 2.2.0
+    implementation("com.google.devtools.ksp:ksp-gradle-plugin:2.2.0-2.0.2")
+
+    // Hilt DI
     implementation("com.google.dagger:hilt-android-gradle-plugin:2.57")
-    implementation("com.diffplug.spotless:spotless-plugin-gradle:7.2.1")
+
+    // Code Quality
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.8")
+    implementation("com.diffplug.spotless:spotless-plugin-gradle:7.2.1")
 
-    // OpenAPI Generator - Updated to match version catalog
-    implementation("org.openapitools:openapi-generator-gradle-plugin:7.14.0")
+    // Documentation
+    implementation("org.jetbrains.dokka:dokka-gradle-plugin:2.0.0")
 
-    // Testing - Updated versions
-    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testImplementation(gradleTestKit())
-}
+    // OpenAPI Generator - MISSING BEFORE
+    implementation("org.openapi.generator:openapi-generator-gradle-plugin:7.14.0")
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
-}
+    // C++ NDK Native Support - WAS MISSING
+    implementation("com.android.tools.build:gradle:8.12.0") // Contains NDK support
 
-tasks.withType<JavaCompile> {
-    options.release.set(21)
-}
+    // Serialization
+    implementation("org.jetbrains.kotlin:kotlin-serialization:2.2.0")
 
-tasks.test {
-    useJUnitPlatform()
-
-    testLogging {
-        events("passed", "skipped", "failed")
-    }
-
-    systemProperty("gradle.test.kit.debug", "false")
+    // Navigation - WAS MISSING
+    implementation("androidx.navigation:navigation-safe-args-gradle-plugin:2.9.3")
 }

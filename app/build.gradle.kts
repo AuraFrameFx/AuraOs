@@ -1,11 +1,10 @@
-import plugins.AndroidAppConventionPlugin
-import plugins.OpenApiConventionPlugin
-import plugins.DocumentationConventionPlugin
-
 plugins {
-    id("android-app-convention")
-    id("openapi-convention")
-    id("documentation-convention")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.compose)
 }
 
 dependencies {
@@ -18,4 +17,7 @@ dependencies {
     implementation(platform(GenesisDependencies.Compose.bom))
     implementation(GenesisDependencies.Compose.ui)
     implementation(GenesisDependencies.Compose.material3)
+
+    // Navigation
+    implementation(GenesisDependencies.Navigation.compose)
 }

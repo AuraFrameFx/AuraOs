@@ -6,6 +6,7 @@ object GenesisVersions {
     const val gradle = "9.0.0"
 
     // Java/JVM
+    const val jvmTarget = "21"           // Bytecode target
     const val javaToolchain = "24"       // Toolchain version
 
     // Android
