@@ -6,7 +6,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt")
     id("com.diffplug.spotless")
     id("dagger.hilt.android.plugin")
-
+    
     // Genesis Protocol Convention Plugins
     id("AndroidLibraryConventionPlugin")
     id("DocumentationConventionPlugin")

@@ -6,7 +6,7 @@ plugins {
 }
 
 // Configure Spotless for all projects
-spotless {
+configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     // Configure Kotlin formatting
     kotlin {
         target("**/*.kt")
