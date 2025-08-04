@@ -12,18 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
-      actions: read
+      contents: read/write 
+      
+      actions: read/write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      - name: Set up JDK 24
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '24'
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
