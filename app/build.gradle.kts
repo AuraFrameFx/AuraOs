@@ -1,16 +1,21 @@
 plugins {
-    // Genesis Protocol Convention Plugins - Using class references
-    id("android-app-convention")
-    id("documentation-convention")
-    id("openapi-convention")
+    // Apply convention plugins that actually exist as .gradle.kts files
+    id("openapi-generation-conventions")
+    id("detekt-conventions")
+    id("spotless-conventions")
 
-    // Core Android & Kotlin
+    // Core Android & Kotlin plugins - these need to be applied directly since your convention plugins handle them
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt.android)
+
+    // KSP is already applied by HiltConventionPlugin in buildSrc, so removing duplicate application
 }
 
-// Apply Genesis Protocol plugin
+// Apply custom buildSrc plugins using class references
+apply<plugins.AndroidAppConventionPlugin>()
+apply<plugins.DocumentationConventionPlugin>()
+apply<plugins.OpenApiConventionPlugin>()
 apply<plugins.GenesisProtocolPlugin>()
 
 android {
@@ -182,56 +187,56 @@ tasks.register("cleanGeneratedApi") {
 // Genesis Protocol - AI Ecosystem Dependencies
 dependencies {
     // Core AndroidX
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
+    implementation($$result.androidx.core.ktx)
+    implementation($$result.androidx.lifecycle.runtime.ktx)
+    implementation($$result.androidx.activity.compose)
     
     // Compose - Genesis UI System
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.bundles.compose)
-    implementation(libs.androidx.navigation.compose)
+    implementation(platform($$result.androidx.compose.bom))
+    implementation($$result.bundles.compose)
+    implementation($$result.androidx.navigation.compose)
     
     // Hilt - Genesis AI Dependency Injection
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-    implementation(libs.hilt.navigation.compose)
+    implementation($$result.hilt.android)
+    ksp($$result.hilt.compiler)
+    implementation($$result.hilt.navigation.compose)
     
     // Coroutines - Genesis Async Processing  
-    implementation(libs.bundles.coroutines)
+    implementation($$result.bundles.coroutines)
     
     // Network - Genesis Protocol Communication (includes Retrofit + Serialization)
-    implementation(libs.bundles.network)
+    implementation($$result.bundles.network)
     
     // Room Database - Genesis Memory Persistence
-    implementation(libs.room.runtime)
-    implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
+    implementation($$result.room.runtime)
+    implementation($$result.room.ktx)
+    ksp($$result.room.compiler)
     
     // Utilities - Genesis Protocol Support
-    implementation(libs.timber)
-    implementation(libs.coil.compose)
+    implementation($$result.timber)
+    implementation($$result.coil.compose)
     
     // Core library desugaring - Java 24 Support
-    coreLibraryDesugaring(libs.coreLibraryDesugaring)
+    coreLibraryDesugaring($$result.coreLibraryDesugaring)
     
     // Memory Leak Detection - Genesis Debugging
-    debugImplementation(libs.leakcanary.android)
+    debugImplementation($$result.leakcanary.android)
     
     // Testing - Genesis Ecosystem Validation
-    testImplementation(libs.bundles.testing)
-    testRuntimeOnly(libs.junit.engine)
+    testImplementation($$result.bundles.testing)
+    testRuntimeOnly($$result.junit.engine)
     
     // Android Instrumentation Tests
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.hilt.android.testing)
-    kspAndroidTest(libs.hilt.compiler)
+    androidTestImplementation($$result.androidx.test.ext.junit)
+    androidTestImplementation($$result.espresso.core)
+    androidTestImplementation(platform($$result.androidx.compose.bom))
+    androidTestImplementation($$result.androidx.compose.ui.test.junit4)
+    androidTestImplementation($$result.hilt.android.testing)
+    kspAndroidTest($$result.hilt.compiler)
     
     // Debug implementations
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    debugImplementation($$result.androidx.compose.ui.tooling)
+    debugImplementation($$result.androidx.compose.ui.test.manifest)
 }
 
 // Code Quality Configuration

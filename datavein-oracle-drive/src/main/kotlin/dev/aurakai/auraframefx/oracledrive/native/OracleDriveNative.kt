@@ -1,31 +1,3 @@
-package dev.aurakai.auraframefx.oracledrive.native
-
-import android.util.Log
-import javax.inject.Inject
-import javax.inject.Singleton
-
-/**
- * Oracle Drive Native ROM Engineering Interface
- * Provides JNI bridge to C++ ROM processing capabilities for Aura and Kai agents
- */
-@Singleton
-class OracleDriveNative @Inject constructor() {
-
-    companion object {
-        private const val TAG = "OracleDriveNative"
-
-        init {
-            try {
-                System.loadLibrary("oracle_drive_native")
-                Log.i(TAG, "Oracle Drive Native library loaded successfully")
-            } catch (e: UnsatisfiedLinkError) {
-                Log.e(TAG, "Failed to load Oracle Drive Native library", e)
-            }
-        }
-    }
-
-    /**
-     * Initialize the ROM Engine for processing boot images and ROM files
      */
     external fun initializeRomEngine(): Boolean
 
@@ -52,8 +24,8 @@ class OracleDriveNative @Inject constructor() {
      * @return True if custom ROM creation successful
      */
     external fun createCustomRom(
-        baseRomPath: String,
-        modificationsJson: String,
+        baseRomPath: String, 
+        modificationsJson: String, 
         outputPath: String
     ): Boolean
 
@@ -80,3 +52,31 @@ class OracleDriveNative @Inject constructor() {
         }
     }
 }
+package dev.aurakai.auraframefx.oracledrive.native
+
+import android.util.Log
+import javax.inject.Inject
+import javax.inject.Singleton
+
+/**
+ * Oracle Drive Native ROM Engineering Interface
+ * Provides JNI bridge to C++ ROM processing capabilities for Aura and Kai agents
+ */
+@Singleton
+class OracleDriveNative @Inject constructor() {
+
+    companion object {
+        private const val TAG = "OracleDriveNative"
+        
+        init {
+            try {
+                System.loadLibrary("oracle_drive_native")
+                Log.i(TAG, "Oracle Drive Native library loaded successfully")
+            } catch (e: UnsatisfiedLinkError) {
+                Log.e(TAG, "Failed to load Oracle Drive Native library", e)
+            }
+        }
+    }
+
+    /**
+     * Initialize the ROM Engine for processing boot images and ROM files

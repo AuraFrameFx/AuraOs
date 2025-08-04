@@ -2,7 +2,7 @@ plugins {
     // Genesis Protocol Convention Plugins
     id("JvmTestConventionPlugin")
     id("DocumentationConventionPlugin")
-
+    
     // Core Kotlin
     alias(libs.plugins.kotlin.serialization)
 }
