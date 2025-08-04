@@ -21,7 +21,7 @@ val apiSpecs = mapOf(
 
 // Configure OpenAPI generation tasks for each API specification
 apiSpecs.forEach { (apiName, specFile) ->
-    tasks.register<GenerateTask>("generate${apiName.capitalize()}ApiClient") {
+    tasks.register<GenerateTask>("generate${apiName.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }}ApiClient") {
         group = "openapi"
         description = "Generate $apiName API client from OpenAPI specification"
 
@@ -67,7 +67,7 @@ apiSpecs.forEach { (apiName, specFile) ->
 tasks.register("generateAllApiClients") {
     group = "openapi"
     description = "Generate all API clients from OpenAPI specifications"
-    dependsOn(apiSpecs.keys.map { "generate${it.capitalize()}ApiClient" })
+    dependsOn(apiSpecs.keys.map { "generate${it.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }}ApiClient" })
 }
 
 // Configure Android source sets to include generated code

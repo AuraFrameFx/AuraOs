@@ -1,8 +1,6 @@
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.register
 
 /**
@@ -12,15 +10,13 @@ import org.gradle.kotlin.dsl.register
 class SecureCommunicationConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-
             // Apply base library convention
             pluginManager.apply("AndroidLibraryConventionPlugin")
 
             dependencies {
                 // Secure Communication Core
-                add("implementation", libs.findLibrary("kotlinx-coroutines-core").get())
-                add("implementation", libs.findLibrary("kotlinx-serialization-json").get())
+                add("implementation", "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+                add("implementation", "org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
                 // Cryptography & Security
                 add("implementation", "org.bouncycastle:bcprov-jdk18on:1.78")
@@ -28,12 +24,12 @@ class SecureCommunicationConventionPlugin : Plugin<Project> {
                 add("implementation", "com.google.crypto.tink:tink-android:1.13.0")
 
                 // Network Security
-                add("implementation", libs.findLibrary("okhttp").get())
+                add("implementation", "com.squareup.okhttp3:okhttp:5.1.0")
                 add("implementation", "com.squareup.okhttp3:okhttp-tls:4.12.0")
                 add("implementation", "io.socket:socket.io-client:2.1.0")
 
                 // Genesis AI Security Integration
-                add("implementation", libs.findLibrary("tensorflow-lite").get())
+                add("implementation", "org.tensorflow:tensorflow-lite:2.16.1")
             }
 
             // Secure Communication Tasks

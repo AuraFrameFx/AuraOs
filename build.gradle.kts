@@ -14,7 +14,6 @@ plugins {
     
     // Genesis Protocol Integration
     id("genesis.protocol")
-    kotlin("jvm")
 }
 
 // Configure Java toolchain for all subprojects - AUTO DETECT
