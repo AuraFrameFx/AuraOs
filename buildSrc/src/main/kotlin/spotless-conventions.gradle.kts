@@ -37,7 +37,6 @@ spotless {
         targetExclude("**/build/**")
         ktlint("1.2.1")
         trimTrailingWhitespace()
-        indentWithSpaces(4)  // Changed from deprecated indentWithTabs()
         endWithNewline()
     }
 
@@ -46,7 +45,6 @@ spotless {
         target("**/*.md")
         targetExclude("**/build/**", "**/.gradle/**")
         trimTrailingWhitespace()
-        indentWithSpaces(2)  // This one was already correct
         endWithNewline()
     }
 }

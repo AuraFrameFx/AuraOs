@@ -1,22 +1,17 @@
 plugins {
-    // Genesis Protocol Convention Plugins
-    id("AndroidAppConventionPlugin")
-    id("DocumentationConventionPlugin")
-    id("OpenApiConventionPlugin")
-    id("ComposeConventionPlugin")
+    // Genesis Protocol Convention Plugins - Using class references
+    id("android-app-convention")
+    id("documentation-convention")
+    id("openapi-convention")
 
     // Core Android & Kotlin
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
-    
-    // Code Quality & Documentation
-    id("io.gitlab.arturbosch.detekt")
-    id("com.diffplug.spotless")
-    
-    // Genesis Protocol Build Integration
-    id("genesis.protocol")
 }
+
+// Apply Genesis Protocol plugin
+apply<plugins.GenesisProtocolPlugin>()
 
 android {
     namespace = "dev.aurakai.auraframefx"
