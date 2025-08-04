@@ -1,11 +1,9 @@
 plugins {
-    // Genesis Protocol Convention Plugins
-    id("SandboxUIConventionPlugin")
-    id("DocumentationConventionPlugin")
-    id("ComposeConventionPlugin")
-    
-    // Core Kotlin
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
 }
 
@@ -35,10 +33,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_24
     }
 
-    kotlinOptions {
-        jvmTarget = "24"
-    }
-
     buildFeatures {
         compose = true
     }
@@ -52,6 +46,10 @@ android {
             kotlin.srcDir("build/generated/openapi/src/main/kotlin")
         }
     }
+}
+
+kotlin {
+    jvmToolchain(24)
 }
 
 dependencies {
@@ -80,8 +78,6 @@ dependencies {
     // System interaction and documentation (using local JAR files)
     implementation(files("${project.rootDir}/Libs/api-82.jar"))
     implementation(files("${project.rootDir}/Libs/api-82-sources.jar"))
-    // Dokka for documentation
-    plugins.apply("org.jetbrains.dokka")
 
     // Testing
     testImplementation(libs.junit)

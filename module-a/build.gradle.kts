@@ -1,11 +1,9 @@
 plugins {
-    // Genesis Protocol Convention Plugins
-    id("AndroidLibraryConventionPlugin")
-    id("DocumentationConventionPlugin")
-    id("ComposeConventionPlugin")
-    
-    // Core Kotlin
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
 }
 

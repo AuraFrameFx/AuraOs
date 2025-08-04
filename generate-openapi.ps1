@@ -18,6 +18,7 @@ if (-not (Test-Path "openapi-generator-cli.jar")) {
 function Generate-OpenAPI {
     param(
         [string]$ModuleName,
+        [string]$SpecFile,
         [string]$ApiPackage,
         [string]$ModelPackage
     )
@@ -30,8 +31,9 @@ function Generate-OpenAPI {
         New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
     }
     
-    & java -jar openapi-generator-cli.jar generate `
-        -i openapi.yml `
+    # Use detected Java 24 binary for OpenAPI codegen
+    & "C:\Users\Wehtt\.jdks\openjdk-24.0.2\bin\java.exe" -jar openapi-generator-cli.jar generate `
+        -i "api-spec/$SpecFile" `
         -g kotlin `
         -c openapi-generator-config.json `
         -o $outputDir `
@@ -40,12 +42,12 @@ function Generate-OpenAPI {
         --additional-properties=library=jvm-retrofit2
 }
 
-# Generate for each module
-Generate-OpenAPI -ModuleName "app" -ApiPackage "dev.aurakai.auraframefx.api.generated" -ModelPackage "dev.aurakai.auraframefx.model.generated"
-Generate-OpenAPI -ModuleName "core-module" -ApiPackage "dev.aurakai.auraframefx.core.api.generated" -ModelPackage "dev.aurakai.auraframefx.core.model.generated"
-Generate-OpenAPI -ModuleName "datavein-oracle-drive" -ApiPackage "dev.aurakai.auraframefx.oracledrive.api.generated" -ModelPackage "dev.aurakai.auraframefx.oracledrive.model.generated"
-Generate-OpenAPI -ModuleName "feature-module" -ApiPackage "dev.aurakai.auraframefx.feature.api.generated" -ModelPackage "dev.aurakai.auraframefx.feature.model.generated"
-Generate-OpenAPI -ModuleName "datavein-oracle-native" -ApiPackage "dev.aurakai.auraframefx.oraclenative.api.generated" -ModelPackage "dev.aurakai.auraframefx.oraclenative.model.generated"
+# Generate for each module with correct spec
+Generate-OpenAPI -ModuleName "app" -SpecFile "genesis-api.yml" -ApiPackage "dev.aurakai.auraframefx.api.generated" -ModelPackage "dev.aurakai.auraframefx.model.generated"
+Generate-OpenAPI -ModuleName "core-module" -SpecFile "system-api.yml" -ApiPackage "dev.aurakai.auraframefx.core.api.generated" -ModelPackage "dev.aurakai.auraframefx.core.model.generated"
+Generate-OpenAPI -ModuleName "datavein-oracle-drive" -SpecFile "oracle-drive-api.yml" -ApiPackage "dev.aurakai.auraframefx.oracledrive.api.generated" -ModelPackage "dev.aurakai.auraframefx.oracledrive.model.generated"
+Generate-OpenAPI -ModuleName "feature-module" -SpecFile "customization-api.yml" -ApiPackage "dev.aurakai.auraframefx.feature.api.generated" -ModelPackage "dev.aurakai.auraframefx.feature.model.generated"
+Generate-OpenAPI -ModuleName "datavein-oracle-native" -SpecFile "ai-api.yml" -ApiPackage "dev.aurakai.auraframefx.oraclenative.api.generated" -ModelPackage "dev.aurakai.auraframefx.oraclenative.model.generated"
 
 Write-Host "=== OpenAPI Generation Complete ===" -ForegroundColor Green
 Write-Host "Generated API clients for all modules:" -ForegroundColor White

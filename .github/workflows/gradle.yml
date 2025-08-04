@@ -1,0 +1,44 @@
+name: Build and Test (Gradle)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+
+      - name: Run tests
+        run: ./gradlew test --no-daemon
+
+      - name: Generate Dokka HTML docs
+        run: ./gradlew dokkaHtmlMultiModule --no-daemon || ./gradlew dokkaHtml --no-daemon || true
+        continue-on-error: true
+
+      - name: Upload Dokka docs artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dokka-docs
+          path: '**/build/dokka/**'
+

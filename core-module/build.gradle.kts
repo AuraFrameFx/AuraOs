@@ -1,12 +1,9 @@
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("android-library-conventions")
-    id("openapi-generation-conventions")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-
-    // Genesis Protocol Convention Plugins
-    id("AndroidLibraryConventionPlugin")
-    id("DocumentationConventionPlugin")
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
 }
 
 android {

@@ -20,7 +20,7 @@ pluginManagement {
 
 plugins {
     // Java Toolchain Auto-detect
-    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
 }
 
 dependencyResolutionManagement {
@@ -43,13 +43,13 @@ rootProject.name = "Genesis-Os"
 // Genesis Protocol - Core Modules
 include(":app")
 
-// Genesis Protocol - AI Ecosystem Modules (Commented for initial build)
-// include(":core-module")
-// include(":feature-module") 
-// include(":datavein-oracle-drive")
-// include(":datavein-oracle-native")
-// include(":secure-comm")
-// include(":oracle-drive-integration")
-// include(":sandbox-ui")
-// include(":collab-canvas")
-// include(":colorblendr")
+// Genesis Protocol - AI Ecosystem Modules 
+include(":core-module")
+include(":feature-module") 
+include(":datavein-oracle-drive")
+include(":datavein-oracle-native")
+include(":secure-comm")
+include(":oracle-drive-integration")
+include(":sandbox-ui")
+include(":collab-canvas")
+include(":colorblendr")
