@@ -27,8 +27,8 @@ jobs:
             version=$(grep -E 'languageVersion\s*=\s*JavaLanguageVersion\.of\([0-9]+' build.gradle.kts | grep -oE '[0-9]+' | head -1)
           fi
           if [ -z "$version" ]; then
-            # Fallback: default to 21 if not found
-            version=21
+            # Fallback: default to 24 if not found
+            version=24
           fi
           echo "Detected Java version: $version"
           echo "jdk_version=$version" >> $GITHUB_OUTPUT
@@ -36,7 +36,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: 'openjdk'
           java-version: ${{ steps.detect-jdk.outputs.jdk_version }}
 
       - name: Set up Android SDK
