@@ -1,6 +1,12 @@
 plugins {
-    id("android-library-conventions")
-    id("openapi-generation-conventions")
+    // Genesis Protocol Convention Plugins
+    id("AndroidLibraryConventionPlugin")
+    id("DocumentationConventionPlugin")
+    id("ComposeConventionPlugin")
+
+    // Core Kotlin
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 android {

@@ -1,8 +1,9 @@
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.register
 import org.openapitools.generator.gradle.plugin.OpenApiGeneratorPlugin
-import org.openapitools.generator.gradle.plugin.extensions.OpenApiGeneratorGenerateExtension
+import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
+import java.util.Locale
 
 class OpenApiConventionPlugin : Plugin<Project> {
     override fun apply(project: Project) {
@@ -14,11 +15,11 @@ class OpenApiConventionPlugin : Plugin<Project> {
                 description = "Generate all OpenAPI clients for Genesis Protocol"
 
                 dependsOn(
-                    "generateAiApi",
-                    "generateOracleDriveApi",
-                    "generateSandboxApi",
-                    "generateSystemApi",
-                    "generateCustomizationApi"
+                    "generateAiApiClient",
+                    "generateOracleDriveApiClient",
+                    "generateSandboxApiClient",
+                    "generateSystemApiClient",
+                    "generateCustomizationApiClient"
                 )
             }
 
@@ -31,17 +32,21 @@ class OpenApiConventionPlugin : Plugin<Project> {
         }
     }
 
-    private fun Project.configureApiGeneration(apiName: String, specFile: String) {
-        tasks.register("generate${apiName.capitalize()}Api", org.openapitools.generator.gradle.plugin.tasks.GenerateTask::class) {
-            generatorName.set("kotlin")
-            inputSpec.set("$projectDir/api-spec/$specFile.yml")
-            outputDir.set("$buildDir/generated/openapi/$apiName")
-            packageName.set("dev.aurakai.genesis.api.$apiName")
+    private fun Project.configureApiGeneration(apiName: String, specFileName: String) {
+        tasks.register<GenerateTask>("generate${apiName.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}ApiClient") {
+            group = "openapi"
+            description = "Generate $apiName API client"
 
-            configOptions.putAll(mapOf(
+            generatorName.set("kotlin")
+            inputSpec.set("${rootProject.projectDir}/api-spec/${specFileName}.yml")
+            outputDir.set("${layout.buildDirectory.get()}/generated/openapi/${apiName}")
+            packageName.set("${project.group}.${project.name}.api.${apiName}")
+
+            configOptions.set(mapOf(
+                "useCoroutines" to "true",
                 "serializationLibrary" to "kotlinx_serialization",
-                "dateLibrary" to "kotlinx-datetime",
-                "enumPropertyNaming" to "UPPERCASE"
+                "enumPropertyNaming" to "UPPERCASE",
+                "parcelizeModels" to "true"
             ))
 
             generateModelTests.set(false)

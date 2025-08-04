@@ -10,79 +10,74 @@ plugins {
 // Apply the OpenAPI generator plugin
 apply<OpenApiGeneratorPlugin>()
 
-// Configure OpenAPI generation tasks
-tasks.register<GenerateTask>("generateApiClient") {
+// Define the API specifications available
+val apiSpecs = mapOf(
+    "ai" to "ai-api.yml",
+    "oracle-drive" to "oracle-drive-api.yml",
+    "customization" to "customization-api.yml",
+    "sandbox" to "sandbox-api.yml",
+    "system" to "system-api.yml"
+)
+
+// Configure OpenAPI generation tasks for each API specification
+apiSpecs.forEach { (apiName, specFile) ->
+    tasks.register<GenerateTask>("generate${apiName.capitalize()}ApiClient") {
+        group = "openapi"
+        description = "Generate $apiName API client from OpenAPI specification"
+
+        // Look for API spec in multiple locations
+        val projectSpecFile = file("src/main/openapi/${specFile}")
+        val rootSpecFile = rootProject.file("api-spec/${specFile}")
+        val rootOpenApiFile = rootProject.file("openapi.yml")
+
+        // Use project-specific spec if it exists, otherwise use root api-spec, fallback to root openapi.yml
+        inputSpec.set(
+            when {
+                projectSpecFile.exists() -> projectSpecFile.absolutePath
+                rootSpecFile.exists() -> rootSpecFile.absolutePath
+                rootOpenApiFile.exists() -> rootOpenApiFile.absolutePath
+                else -> throw GradleException("No OpenAPI specification found for $apiName")
+            }
+        )
+
+        outputDir.set("${project.layout.buildDirectory.get()}/generated/openapi/${apiName}")
+
+        // Configuration from openapi-generator-config.json
+        generatorName.set("kotlin")
+        library.set("jvm-retrofit2")
+
+        configOptions.putAll(mapOf(
+            "useCoroutines" to "true",
+            "serializationLibrary" to "kotlinx_serialization",
+            "enumPropertyNaming" to "UPPERCASE",
+            "parcelizeModels" to "true",
+            "dateLibrary" to "java8",
+            "collectionType" to "list",
+            "packageName" to "${project.group}.${project.name}.api.${apiName}",
+            "apiPackage" to "${project.group}.${project.name}.api.${apiName}.client",
+            "modelPackage" to "${project.group}.${project.name}.api.${apiName}.model"
+        ))
+
+        // Ignore files we don't need
+        ignoreFileOverride.set("${rootProject.projectDir}/.openapi-generator-ignore")
+    }
+}
+
+// Create a combined task to generate all API clients
+tasks.register("generateAllApiClients") {
     group = "openapi"
-    description = "Generate API client from OpenAPI specification"
-    
-    // Default configuration - modules can override these
-    val projectOpenApiFile = file("src/main/openapi.yml")
-    val rootOpenApiFile = rootProject.file("openapi.yml")
-    
-    // Use project-specific openapi.yml if it exists, otherwise use root
-    inputSpec.set(
-        if (projectOpenApiFile.exists()) {
-            projectOpenApiFile.absolutePath
-        } else {
-            rootOpenApiFile.absolutePath
-        }
-    )
-    
-    outputDir.set("${project.layout.buildDirectory.get()}/generated/openapi")
-    
-    // Configuration from openapi-generator-config.json
-    generatorName.set("kotlin")
-    library.set("jvm-retrofit2")
-    
-    configOptions.putAll(mapOf(
-        "useCoroutines" to "true",
-        "serializationLibrary" to "kotlinx_serialization",
-        "enumPropertyNaming" to "UPPERCASE",
-        "parcelizeModels" to "true",
-        "dateLibrary" to "java8",
-        "collectionType" to "list",
-        "packageName" to "${project.group}.${project.name}.api",
-        "apiPackage" to "${project.group}.${project.name}.api.client",
-        "modelPackage" to "${project.group}.${project.name}.api.model"
-    ))
-    
-    // Ignore files we don't need
-    ignoreFileOverride.set("${rootProject.projectDir}/.openapi-generator-ignore")
+    description = "Generate all API clients from OpenAPI specifications"
+    dependsOn(apiSpecs.keys.map { "generate${it.capitalize()}ApiClient" })
 }
 
-// Auto-generate API client before compiling - defer until Kotlin plugin is applied
-pluginManager.withPlugin("org.jetbrains.kotlin.android") {
-    tasks.named("compileKotlin") {
-        dependsOn("generateApiClient")
-    }
-}
+// Configure Android source sets to include generated code
+afterEvaluate {
+    val androidExtension = extensions.findByType<LibraryExtension>()
+        ?: extensions.findByType<AppExtension>()
 
-// Add generated sources to source sets only if Android plugin is applied
-pluginManager.withPlugin("com.android.library") {
-    extensions.configure<com.android.build.gradle.LibraryExtension> {
-        sourceSets {
-            getByName("main") {
-                java.srcDirs("${project.layout.buildDirectory.get()}/generated/openapi/src/main/kotlin")
-            }
+    androidExtension?.let { android ->
+        android.sourceSets.getByName("main") {
+            java.srcDirs("${project.layout.buildDirectory.get()}/generated/openapi")
         }
     }
-}
-
-pluginManager.withPlugin("com.android.application") {
-    extensions.configure<com.android.build.gradle.AppExtension> {
-        sourceSets {
-            getByName("main") {
-                java.srcDirs("${project.layout.buildDirectory.get()}/generated/openapi/src/main/kotlin")
-            }
-        }
-    }
-}
-
-// Add necessary dependencies for generated code
-dependencies {
-    add("implementation", "com.squareup.retrofit2:retrofit:2.11.0")
-    add("implementation", "com.squareup.retrofit2:converter-kotlinx-serialization:2.11.0")
-    add("implementation", "org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
-    add("implementation", "com.squareup.okhttp3:okhttp:4.12.0")
-    add("implementation", "com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

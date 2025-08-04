@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-// Enable Gradle features
+// Genesis Protocol - Enable Gradle Features
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
@@ -12,8 +12,14 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://jitpack.io")
     }
+    plugins {
+        // Kotlin 2.2.0 - K2 Compiler
+        kotlin("jvm") version "2.2.0"
+    }
 }
+
 plugins {
+    // Java Toolchain Auto-detect
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
@@ -25,15 +31,25 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://jitpack.io")
         maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+        
+        // Genesis Protocol - AI Backend Dependencies
+        maven("https://repo1.maven.org/maven2/")
     }
 }
 
+// Genesis Protocol - Project Configuration
 rootProject.name = "Genesis-Os"
 
-// Include only app module for testing
+// Genesis Protocol - Core Modules
 include(":app")
+
+// Genesis Protocol - AI Ecosystem Modules (Commented for initial build)
 // include(":core-module")
-// include(":feature-module")
+// include(":feature-module") 
 // include(":datavein-oracle-drive")
 // include(":datavein-oracle-native")
 // include(":secure-comm")
+// include(":oracle-drive-integration")
+// include(":sandbox-ui")
+// include(":collab-canvas")
+// include(":colorblendr")

@@ -1,6 +1,10 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
-    id("org.jetbrains.dokka") version "1.9.20"
+    // Genesis Protocol Convention Plugins
+    id("JvmTestConventionPlugin")
+    id("DocumentationConventionPlugin")
+
+    // Core Kotlin
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {

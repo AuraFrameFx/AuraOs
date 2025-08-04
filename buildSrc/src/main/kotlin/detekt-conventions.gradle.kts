@@ -42,8 +42,8 @@ dependencies {
 
 // Configure tasks
 tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
-    // Target version of the generated JVM bytecode
-    jvmTarget = JavaVersion.VERSION_17.toString()
+    // Target Java 24 bytecode (consistent with project)
+    jvmTarget = "24"
 
     // Enable parallel compilation of detekt tasks
     parallel = true
@@ -53,9 +53,6 @@ tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
 
     // Enable all available (but not necessarily all) rules
     allRules = false
-
-    // Target Java 24 bytecode
-    jvmTarget = "24"
 
     // Enable auto-correction for the following checks
     // autoCorrect is false by default
@@ -94,8 +91,6 @@ tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
     }
 }
 
-// Ensure Detekt uses the same Kotlin version as the project
+// Ensure Detekt uses Java 24 (consistent with project)
 // This helps avoid version conflicts
-tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
-    jvmTarget = JavaVersion.VERSION_21.toString()
-}
+// Note: jvmTarget is already configured above, no need to override

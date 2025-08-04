@@ -1,8 +1,13 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    // Genesis Protocol Convention Plugins
+    id("SecureCommunicationConventionPlugin")
+    id("AndroidLibraryConventionPlugin")
+    id("DocumentationConventionPlugin")
+
+    // Core Kotlin
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 android {

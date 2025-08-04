@@ -3,6 +3,10 @@ plugins {
     id("android-library-conventions")
     id("openapi-generation-conventions")
     alias(libs.plugins.kotlin.compose)
+
+    // Genesis Protocol Convention Plugins
+    id("AndroidLibraryConventionPlugin")
+    id("DocumentationConventionPlugin")
 }
 
 android {

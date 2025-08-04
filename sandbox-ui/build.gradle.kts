@@ -1,6 +1,12 @@
 plugins {
-    id("android-library-conventions")
-    id("kotlin-kapt")
+    // Genesis Protocol Convention Plugins
+    id("SandboxUIConventionPlugin")
+    id("DocumentationConventionPlugin")
+    id("ComposeConventionPlugin")
+
+    // Core Kotlin
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 android {

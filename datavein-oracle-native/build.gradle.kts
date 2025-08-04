@@ -1,5 +1,8 @@
 plugins {
     id("android-library-conventions")
+    // Genesis Protocol Convention Plugins
+    id("OracleDriveConventionPlugin")
+    id("DocumentationConventionPlugin")
 }
 
 android {

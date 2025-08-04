@@ -1,8 +1,13 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-}
+    // Genesis Protocol Convention Plugins
+    id("CollaborationCanvasConventionPlugin")
+    id("DocumentationConventionPlugin")
+    id("ComposeConventionPlugin")
 
+    // Core Kotlin
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
+}
 
 android {
     namespace = "dev.aurakai.auraframefx"
