@@ -1,0 +1,423 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dev.aurakai.auraframefx.debug"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="33"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:5:5-66
+12-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:5:22-63
+13    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+13-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:6:5-81
+13-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:6:22-78
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:23:5-68
+14-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:23:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:24:5-79
+15-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:24:22-76
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:26:5-77
+16-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:26:22-74
+17
+18    <permission
+18-->[androidx.core:core:1.16.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
+19        android:name="dev.aurakai.auraframefx.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.16.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.16.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="dev.aurakai.auraframefx.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.16.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.16.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
+23
+24    <application
+24-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:8:5-57:19
+25        android:name="dev.aurakai.auraframefx.AuraFrameApplication"
+25-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:9:9-45
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.16.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\AndroidManifest.xml:28:18-86
+27        android:debuggable="true"
+28        android:enableOnBackInvokedCallback="true"
+28-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:15:9-51
+29        android:extractNativeLibs="false"
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:10:9-43
+31        android:label="AuraFrameFX LSPosed Module"
+31-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:11:9-51
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:12:9-54
+33        android:supportsRtl="true"
+33-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:13:9-35
+34        android:theme="@style/Theme.AuraFrameFX" >
+34-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:14:9-49
+35        <meta-data
+35-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:16:9-18:36
+36            android:name="xposedmodule"
+36-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:17:13-40
+37            android:value="true" />
+37-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:18:13-33
+38        <meta-data
+38-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:19:9-21:67
+39            android:name="xposeddescription"
+39-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:20:13-45
+40            android:value="AuraFrameFX hooks and enhancements." />
+40-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:21:13-64
+41        <meta-data
+41-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:22:9-24:34
+42            android:name="xposedminversion"
+42-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:23:13-44
+43            android:value="93" />
+43-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:24:13-31
+44
+45        <activity
+45-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:26:9-33:20
+46            android:name="dev.aurakai.auraframefx.MainActivity"
+46-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:27:13-41
+47            android:exported="true" >
+47-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:28:13-36
+48            <intent-filter>
+48-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:29:13-32:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:30:17-69
+49-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:30:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:31:17-77
+51-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:31:27-74
+52            </intent-filter>
+53        </activity>
+54
+55        <service
+55-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:35:9-37:40
+56            android:name="dev.aurakai.auraframefx.VertexSyncService"
+56-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:36:13-46
+57            android:exported="false" />
+57-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:37:13-37
+58        <service
+58-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:38:9-40:40
+59            android:name="dev.aurakai.auraframefx.security.IntegrityMonitorService"
+59-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:39:13-61
+60            android:exported="false" />
+60-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:40:13-37
+61
+62        <receiver
+62-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:42:9-49:20
+63            android:name="dev.aurakai.auraframefx.receivers.BootCompletedReceiver"
+63-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:43:13-60
+64            android:enabled="true"
+64-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:44:13-35
+65            android:exported="true" >
+65-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:45:13-36
+66            <intent-filter>
+66-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:46:13-48:29
+67                <action android:name="android.intent.action.BOOT_COMPLETED" />
+67-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:47:17-79
+67-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:47:25-76
+68            </intent-filter>
+69        </receiver>
+70        <receiver
+70-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:50:9-56:20
+71            android:name="dev.aurakai.auraframefx.security.IntegrityViolationReceiver"
+71-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:51:13-64
+72            android:exported="true" >
+72-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:52:13-36
+73            <intent-filter>
+73-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:53:13-55:29
+74                <action android:name="dev.aurakai.auraframefx.ACTION_INTEGRITY_VIOLATION" />
+74-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:54:17-93
+74-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:54:25-90
+75            </intent-filter>
+76        </receiver>
+77
+78        <provider
+78-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:29:9-37:20
+79            android:name="androidx.startup.InitializationProvider"
+79-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:30:13-67
+80            android:authorities="dev.aurakai.auraframefx.debug.androidx-startup"
+80-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:31:13-68
+81            android:exported="false" >
+81-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:32:13-37
+82            <meta-data
+82-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:34:13-36:52
+83                android:name="androidx.work.WorkManagerInitializer"
+83-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:35:17-68
+84                android:value="androidx.startup" />
+84-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:36:17-49
+85            <meta-data
+85-->[androidx.emoji2:emoji2:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0873a3e3bfae5dfef0ff1ddd8a572d5b\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+86                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+86-->[androidx.emoji2:emoji2:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0873a3e3bfae5dfef0ff1ddd8a572d5b\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:30:17-75
+87                android:value="androidx.startup" />
+87-->[androidx.emoji2:emoji2:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0873a3e3bfae5dfef0ff1ddd8a572d5b\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:31:17-49
+88            <meta-data
+88-->[androidx.lifecycle:lifecycle-process:2.9.2] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\9ac185615faf75b46cf94aa7b869a9ce\transformed\jetified-lifecycle-process-2.9.2\AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+89-->[androidx.lifecycle:lifecycle-process:2.9.2] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\9ac185615faf75b46cf94aa7b869a9ce\transformed\jetified-lifecycle-process-2.9.2\AndroidManifest.xml:30:17-78
+90                android:value="androidx.startup" />
+90-->[androidx.lifecycle:lifecycle-process:2.9.2] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\9ac185615faf75b46cf94aa7b869a9ce\transformed\jetified-lifecycle-process-2.9.2\AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[com.squareup.okhttp3:okhttp-android:5.1.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\51cc593010062b06eb97ca69b0594294\transformed\jetified-okhttp-release\AndroidManifest.xml:16:13-18:52
+92                android:name="okhttp3.internal.platform.PlatformInitializer"
+92-->[com.squareup.okhttp3:okhttp-android:5.1.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\51cc593010062b06eb97ca69b0594294\transformed\jetified-okhttp-release\AndroidManifest.xml:17:17-77
+93                android:value="androidx.startup" />
+93-->[com.squareup.okhttp3:okhttp-android:5.1.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\51cc593010062b06eb97ca69b0594294\transformed\jetified-okhttp-release\AndroidManifest.xml:18:17-49
+94            <meta-data
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+96                android:value="androidx.startup" />
+96-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+97        </provider>
+98
+99        <service
+99-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:39:9-45:35
+100            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+100-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:40:13-88
+101            android:directBootAware="false"
+101-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:41:13-44
+102            android:enabled="@bool/enable_system_alarm_service_default"
+102-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:42:13-72
+103            android:exported="false" />
+103-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:43:13-37
+104        <service
+104-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:46:9-52:35
+105            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+105-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:47:13-84
+106            android:directBootAware="false"
+106-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:48:13-44
+107            android:enabled="@bool/enable_system_job_service_default"
+107-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:49:13-70
+108            android:exported="true"
+108-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:50:13-36
+109            android:permission="android.permission.BIND_JOB_SERVICE" />
+109-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:51:13-69
+110        <service
+110-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:53:9-59:35
+111            android:name="androidx.work.impl.foreground.SystemForegroundService"
+111-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:54:13-81
+112            android:directBootAware="false"
+112-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:55:13-44
+113            android:enabled="@bool/enable_system_foreground_service_default"
+113-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:56:13-77
+114            android:exported="false" />
+114-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:57:13-37
+115
+116        <receiver
+116-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:61:9-66:35
+117            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+117-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:62:13-88
+118            android:directBootAware="false"
+118-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:63:13-44
+119            android:enabled="true"
+119-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:64:13-35
+120            android:exported="false" />
+120-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:65:13-37
+121        <receiver
+121-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:67:9-77:20
+122            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+122-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:68:13-106
+123            android:directBootAware="false"
+123-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:69:13-44
+124            android:enabled="false"
+124-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:70:13-36
+125            android:exported="false" >
+125-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:71:13-37
+126            <intent-filter>
+126-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:73:13-76:29
+127                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+127-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:74:17-87
+127-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:74:25-84
+128                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+128-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:75:17-90
+128-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:75:25-87
+129            </intent-filter>
+130        </receiver>
+131        <receiver
+131-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:78:9-88:20
+132            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+132-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:79:13-104
+133            android:directBootAware="false"
+133-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:80:13-44
+134            android:enabled="false"
+134-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:81:13-36
+135            android:exported="false" >
+135-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:82:13-37
+136            <intent-filter>
+136-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:84:13-87:29
+137                <action android:name="android.intent.action.BATTERY_OKAY" />
+137-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:85:17-77
+137-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:85:25-74
+138                <action android:name="android.intent.action.BATTERY_LOW" />
+138-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:86:17-76
+138-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:86:25-73
+139            </intent-filter>
+140        </receiver>
+141        <receiver
+141-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:89:9-99:20
+142            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+142-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:90:13-104
+143            android:directBootAware="false"
+143-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:91:13-44
+144            android:enabled="false"
+144-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:92:13-36
+145            android:exported="false" >
+145-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:93:13-37
+146            <intent-filter>
+146-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:95:13-98:29
+147                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+147-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:96:17-83
+147-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:96:25-80
+148                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+148-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:97:17-82
+148-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:97:25-79
+149            </intent-filter>
+150        </receiver>
+151        <receiver
+151-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:100:9-109:20
+152            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+152-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:101:13-103
+153            android:directBootAware="false"
+153-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:102:13-44
+154            android:enabled="false"
+154-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:103:13-36
+155            android:exported="false" >
+155-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:104:13-37
+156            <intent-filter>
+156-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:106:13-108:29
+157                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+157-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:107:17-79
+157-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:107:25-76
+158            </intent-filter>
+159        </receiver>
+160        <receiver
+160-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:110:9-121:20
+161            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+161-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:111:13-88
+162            android:directBootAware="false"
+162-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:112:13-44
+163            android:enabled="false"
+163-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:113:13-36
+164            android:exported="false" >
+164-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:114:13-37
+165            <intent-filter>
+165-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:116:13-120:29
+166                <action android:name="android.intent.action.BOOT_COMPLETED" />
+166-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:47:17-79
+166-->C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\AndroidManifest.xml:47:25-76
+167                <action android:name="android.intent.action.TIME_SET" />
+167-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:118:17-73
+167-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:118:25-70
+168                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+168-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:119:17-81
+168-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:119:25-78
+169            </intent-filter>
+170        </receiver>
+171        <receiver
+171-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:122:9-131:20
+172            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+172-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:123:13-99
+173            android:directBootAware="false"
+173-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:124:13-44
+174            android:enabled="@bool/enable_system_alarm_service_default"
+174-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:125:13-72
+175            android:exported="false" >
+175-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:126:13-37
+176            <intent-filter>
+176-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:128:13-130:29
+177                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+177-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:129:17-98
+177-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:129:25-95
+178            </intent-filter>
+179        </receiver>
+180        <receiver
+180-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:132:9-142:20
+181            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+181-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:133:13-78
+182            android:directBootAware="false"
+182-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:134:13-44
+183            android:enabled="true"
+183-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:135:13-35
+184            android:exported="true"
+184-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:136:13-36
+185            android:permission="android.permission.DUMP" >
+185-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:137:13-57
+186            <intent-filter>
+186-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:139:13-141:29
+187                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+187-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:140:17-88
+187-->[androidx.work:work-runtime:2.10.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\AndroidManifest.xml:140:25-85
+188            </intent-filter>
+189        </receiver>
+190
+191        <activity
+191-->[androidx.compose.ui:ui-tooling-android:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\59d1fef0ddb4f45794c297e81e5d95e2\transformed\jetified-ui-tooling-release\AndroidManifest.xml:23:9-25:39
+192            android:name="androidx.compose.ui.tooling.PreviewActivity"
+192-->[androidx.compose.ui:ui-tooling-android:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\59d1fef0ddb4f45794c297e81e5d95e2\transformed\jetified-ui-tooling-release\AndroidManifest.xml:24:13-71
+193            android:exported="true" />
+193-->[androidx.compose.ui:ui-tooling-android:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\59d1fef0ddb4f45794c297e81e5d95e2\transformed\jetified-ui-tooling-release\AndroidManifest.xml:25:13-36
+194        <activity
+194-->[androidx.compose.ui:ui-test-manifest:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\ee33ab3c2aa3d9a94463d872291d85b4\transformed\jetified-ui-test-manifest-1.8.3\AndroidManifest.xml:23:9-26:79
+195            android:name="androidx.activity.ComponentActivity"
+195-->[androidx.compose.ui:ui-test-manifest:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\ee33ab3c2aa3d9a94463d872291d85b4\transformed\jetified-ui-test-manifest-1.8.3\AndroidManifest.xml:24:13-63
+196            android:exported="true"
+196-->[androidx.compose.ui:ui-test-manifest:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\ee33ab3c2aa3d9a94463d872291d85b4\transformed\jetified-ui-test-manifest-1.8.3\AndroidManifest.xml:25:13-36
+197            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+197-->[androidx.compose.ui:ui-test-manifest:1.8.3] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\ee33ab3c2aa3d9a94463d872291d85b4\transformed\jetified-ui-test-manifest-1.8.3\AndroidManifest.xml:26:13-76
+198
+199        <service
+199-->[androidx.room:room-runtime:2.6.1] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0ac2c9024c367bbc08ff90441394c103\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+200            android:name="androidx.room.MultiInstanceInvalidationService"
+200-->[androidx.room:room-runtime:2.6.1] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0ac2c9024c367bbc08ff90441394c103\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+201            android:directBootAware="true"
+201-->[androidx.room:room-runtime:2.6.1] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0ac2c9024c367bbc08ff90441394c103\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+202            android:exported="false" />
+202-->[androidx.room:room-runtime:2.6.1] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0ac2c9024c367bbc08ff90441394c103\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+203
+204        <receiver
+204-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+205            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+205-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+206            android:directBootAware="false"
+206-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+207            android:enabled="true"
+207-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+208            android:exported="true"
+208-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+209            android:permission="android.permission.DUMP" >
+209-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+210            <intent-filter>
+210-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+211                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+211-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+211-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+212            </intent-filter>
+213            <intent-filter>
+213-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+214                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+214-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+214-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+215            </intent-filter>
+216            <intent-filter>
+216-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+217                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+217-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+217-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+218            </intent-filter>
+219            <intent-filter>
+219-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+220                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+220-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+220-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+221            </intent-filter>
+222        </receiver>
+223    </application>
+224
+225</manifest>
