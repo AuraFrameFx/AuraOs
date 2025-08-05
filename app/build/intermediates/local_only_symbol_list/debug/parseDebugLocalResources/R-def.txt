@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 array sample_array
+array xposed_scope
 attr? buttonCornerRadius
 attr? buttonStrokeColor
 attr? buttonStrokeWidth
@@ -214,6 +215,7 @@ string transcribing
 string user_profile
 string virtual_monitorization
 string xhancement_caution
+string xposed_description
 style ThemeOverlay.AuraFrameFX.ActionBar
 style Theme.AuraFrameFX
 styleable CardView cardCornerRadius cardStrokeColor cardStrokeWidth

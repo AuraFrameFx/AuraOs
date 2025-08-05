@@ -12,10 +12,6 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://jitpack.io")
     }
-    plugins {
-        // Kotlin 2.2.0 - K2 Compiler
-        kotlin("jvm") version "2.2.0"
-    }
 }
 
 plugins {

@@ -8,5 +8,9 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "dev.aurakai.auraframefx.debug";
   public static final String BUILD_TYPE = "debug";
   public static final int VERSION_CODE = 1;
-  public static final String VERSION_NAME = "1.0";
+  public static final String VERSION_NAME = "1.0-debug";
+  // Field from default config.
+  public static final String XPOSED_MIN_VERSION = "82";
+  // Field from default config.
+  public static final boolean XPOSED_MODULE = true;
 }

@@ -4,6 +4,16 @@
         <item>Sample 1</item>
         <item>Sample 2</item>
     </string-array>
+    <string-array name="xposed_scope">
+        <item>android</item>
+        <item>com.android.systemui</item>
+        <item>com.android.chrome</item>
+        <item>com.android.camera2</item>
+        <item>com.google.android.gms</item>
+        <item>com.android.launcher3</item>
+        <item>com.android.settings</item>
+        <item>dev.aurakai.auraframefx</item>
+    </string-array>
     <attr format="enum" name="cornerFamily">
         <enum name="rounded" value="0"/>
         <enum name="cut" value="1"/>
@@ -169,6 +179,7 @@
     <string name="user_profile">User Profile</string>
     <string name="virtual_monitorization">VIRTUAL MONITORIZATION</string>
     <string name="xhancement_caution">Xhancement CAUTION!</string>
+    <string name="xposed_description" translatable="false">"Genesis-OS AI Framework Hooks"</string>
     <style name="Theme.AuraFrameFX" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="android:colorBackground">@color/light_background</item>

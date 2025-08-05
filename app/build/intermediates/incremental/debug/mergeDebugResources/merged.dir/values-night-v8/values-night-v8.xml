@@ -36,13 +36,6 @@
     <color name="secondary">@color/dark_secondary</color>
     <color name="surface">@color/dark_surface</color>
     <color name="tertiary">@color/dark_tertiary</color>
-    <style name="Theme.AppCompat.DayNight" parent="Theme.AppCompat"/>
-    <style name="Theme.AppCompat.DayNight.DarkActionBar" parent="Theme.AppCompat"/>
-    <style name="Theme.AppCompat.DayNight.Dialog" parent="Theme.AppCompat.Dialog"/>
-    <style name="Theme.AppCompat.DayNight.Dialog.Alert" parent="Theme.AppCompat.Dialog.Alert"/>
-    <style name="Theme.AppCompat.DayNight.Dialog.MinWidth" parent="Theme.AppCompat.Dialog.MinWidth"/>
-    <style name="Theme.AppCompat.DayNight.DialogWhenLarge" parent="Theme.AppCompat.DialogWhenLarge"/>
-    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="Theme.AppCompat.NoActionBar"/>
     <style name="Theme.AuraFrameFX" parent="Theme.AppCompat.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/dark_primary</item>
@@ -52,5 +45,4 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         
     </style>
-    <style name="ThemeOverlay.AppCompat.DayNight" parent="ThemeOverlay.AppCompat.Dark"/>
 </resources>
