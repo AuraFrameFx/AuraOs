@@ -1,8 +1,11 @@
 plugins {
-    id("android-library-conventions")
-    // Genesis Protocol Convention Plugins
-    id("OracleDriveConventionPlugin")
-    id("DocumentationConventionPlugin")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.spotless)
 }
 
 android {
@@ -65,15 +68,15 @@ android {
     externalNativeBuild {
         cmake {
             path = file("src/main/cpp/CMakeLists.txt")
-            version = "3.29.2"
+            version = libs.versions.cmakeVersion.get()
         }
     }
 
-    ndkVersion = libs.versions.ndk.get()
+    ndkVersion = libs.versions.ndkVersion.get()
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_24
-        targetCompatibility = JavaVersion.VERSION_24
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -93,10 +96,10 @@ android {
 }
 
 kotlin {
-    jvmToolchain(24)
+    jvmToolchain(21)
 
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
         freeCompilerArgs.addAll(
             "-Xuse-k2",
             "-opt-in=kotlin.RequiresOptIn",
@@ -108,7 +111,7 @@ kotlin {
 dependencies {
     // Project modules
     implementation(project(":core-module"))
-    implementation(project(":datavein-oracle-drive"))
+    // Note: datavein-oracle-drive was removed from settings.gradle.kts
 
     // Core AndroidX
     implementation(libs.androidx.core.ktx)
@@ -121,8 +124,7 @@ dependencies {
     // OpenAPI Generated Code Dependencies
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.kotlinx.serialization)
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.okhttp3.logging.interceptor)
     implementation(libs.kotlinx.serialization.json)
 
     // Core library desugaring

@@ -13,7 +13,6 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -29,8 +28,9 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_24
-        targetCompatibility = JavaVersion.VERSION_24
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+        isCoreLibraryDesugaringEnabled = true
     }
 
     buildFeatures {
@@ -49,7 +49,7 @@ android {
 }
 
 kotlin {
-    jvmToolchain(24)
+    jvmToolchain(21)
 }
 
 dependencies {
@@ -71,9 +71,11 @@ dependencies {
     // OpenAPI Generated Code Dependencies
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.kotlinx.serialization)
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.okhttp3.logging.interceptor)
     implementation(libs.kotlinx.serialization.json)
+
+    // Core library desugaring - Java 24 Support
+    coreLibraryDesugaring(libs.coreLibraryDesugaring)
 
     // System interaction and documentation (using local JAR files)
     implementation(files("${project.rootDir}/Libs/api-82.jar"))

@@ -88,8 +88,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_24
-        targetCompatibility = JavaVersion.VERSION_24
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -130,12 +130,12 @@ android {
     }
 
     // Add generated sources to main source set
-    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/ai/src/main/kotlin")
-    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/customization/src/main/kotlin")
-    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/genesis/src/main/kotlin")
-    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/oracleDrive/src/main/kotlin")
-    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/sandbox/src/main/kotlin")
-    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/system/src/main/kotlin")
+    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/ai/src/main/kotlin"))
+    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/customization/src/main/kotlin"))
+    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/genesis/src/main/kotlin"))
+    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/oracleDrive/src/main/kotlin"))
+    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/sandbox/src/main/kotlin"))
+    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/system/src/main/kotlin"))
 }
 
 afterEvaluate {
@@ -149,9 +149,9 @@ afterEvaluate {
     )
 }
 
-// Kotlin Toolchain - Java 24
+// Kotlin Toolchain - Java 21
 kotlin {
-    jvmToolchain(24)
+    jvmToolchain(21)
 }
 
 dependencies {

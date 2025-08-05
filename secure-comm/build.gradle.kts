@@ -1,13 +1,13 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    // Genesis Protocol Convention Plugins
-    id("SecureCommunicationConventionPlugin")
-    id("AndroidLibraryConventionPlugin")
-    id("DocumentationConventionPlugin")
-
-    // Core Kotlin
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.spotless)
 }
 
 android {
@@ -40,8 +40,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_24
-        targetCompatibility = JavaVersion.VERSION_24
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -70,10 +70,10 @@ android {
 }
 
 kotlin {
-    jvmToolchain(24)
+    jvmToolchain(21)
 
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
         freeCompilerArgs.addAll(
             "-Xuse-k2",
             "-Xskip-prerelease-check",
@@ -116,6 +116,4 @@ dependencies {
     // System interaction and documentation (using local JAR files)
     implementation(files("${project.rootDir}/Libs/api-82.jar"))
     implementation(files("${project.rootDir}/Libs/api-82-sources.jar"))
-    // Dokka for documentation
-    plugins.apply("org.jetbrains.dokka")
 }
