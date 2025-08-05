@@ -36,7 +36,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'openjdk'
+          distribution: 'oracle'
           java-version: ${{ steps.detect-jdk.outputs.jdk_version }}
 
       - name: Set up Android SDK
