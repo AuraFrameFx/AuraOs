@@ -9,11 +9,31 @@ plugins {
     // alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
     // alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
     alias(libs.plugins.spotless)
-    alias(libs.plugins.openapi.generator)
+    alias(libs.plugins.openapi.generator) apply true
 }
 
-// Apply OpenAPI generator configuration
-apply(from = "$rootDir/openapi-generator.gradle.kts")
+import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
+
+// OpenAPI Generator codegen tasks (migrated from openapi-generator.gradle.kts)
+val openapiSpecs = listOf(
+    Triple("ai", "ai-api.yml", "dev.aurakai.auraframefx.api.ai"),
+    Triple("customization", "customization-api.yml", "dev.aurakai.auraframefx.api.customization"),
+    Triple("genesis", "genesis-api.yml", "dev.aurakai.auraframefx.api.genesis"),
+    Triple("oracleDrive", "oracle-drive-api.yml", "dev.aurakai.auraframefx.api.oracledrive"),
+    Triple("sandbox", "sandbox-api.yml", "dev.aurakai.auraframefx.api.sandbox"),
+    Triple("system", "system-api.yml", "dev.aurakai.auraframefx.api.system")
+)
+
+openapiSpecs.forEach { (name, spec, pkg) ->
+    tasks.register("generate${name.replaceFirstChar { it.uppercase() }}ApiClient", GenerateTask::class) {
+        generatorName.set("kotlin")
+        library.set("jvm-retrofit2")
+        inputSpec.set("${rootDir}/api-spec/$spec")
+        outputDir.set(layout.buildDirectory.dir("generated/openapi/$name").get().asFile.absolutePath)
+        packageName.set(pkg)
+        configFile.set("${rootDir}/openapi-generator-config.json")
+    }
+}
 
 android {
     namespace = "dev.aurakai.auraframefx"
@@ -108,6 +128,25 @@ android {
             useLegacyPackaging = true
         }
     }
+
+    // Add generated sources to main source set
+    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/ai/src/main/kotlin")
+    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/customization/src/main/kotlin")
+    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/genesis/src/main/kotlin")
+    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/oracleDrive/src/main/kotlin")
+    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/sandbox/src/main/kotlin")
+    sourceSets["main"].java.srcDir("${buildDir}/generated/openapi/system/src/main/kotlin")
+}
+
+afterEvaluate {
+    tasks.findByName("preBuild")?.dependsOn(
+        "generateAiApiClient",
+        "generateCustomizationApiClient",
+        "generateGenesisApiClient",
+        "generateOracleDriveApiClient",
+        "generateSandboxApiClient",
+        "generateSystemApiClient"
+    )
 }
 
 // Kotlin Toolchain - Java 24

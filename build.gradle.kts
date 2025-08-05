@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.dokka") version "1.9.20" apply false // Updated Dokka plugin
     alias(libs.plugins.google.services) apply false
     alias(libs.plugins.spotless) apply false
+    alias(libs.plugins.openapi.generator) apply true // OpenAPI Generator plugin for root scripts
 }
 
 allprojects {

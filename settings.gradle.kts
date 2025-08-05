@@ -46,10 +46,10 @@ include(":app")
 // Genesis Protocol - AI Ecosystem Modules 
 include(":core-module")
 include(":feature-module") 
-include(":datavein-oracle-drive")
 include(":datavein-oracle-native")
 include(":secure-comm")
-include(":oracle-drive-integration")
 include(":sandbox-ui")
 include(":collab-canvas")
 include(":colorblendr")
+
+// Removed modules: datavein-oracle-drive, oracle-drive-integration
