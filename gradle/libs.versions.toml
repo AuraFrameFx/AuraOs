@@ -1,70 +1,53 @@
 [versions]
-# Build Tools - Java 24 Compatible
+# BLEEDING EDGE VERSIONS 🩸 (Studio-suggested betas)
 agp = "8.12.0"
-gradle = "9.0.0"
-kotlin = "2.2.0"
-ksp = "2.2.0-2.0.2"
-
-# Java/JVM - Auto-detect Compatible
-jvmTarget = "24"
-javaVersion = "24"
-
-# Compose - Latest Stable
-compose = "1.9.0"
-composeBom = "2025.07.00"
-composeCompiler = "2.2.0"
-
-# AndroidX Core - Java 24 Compatible
-compileSdk = "36"
-targetSdk = "36"
-minSdk = "33"
-coreKtx = "1.16.0"
-lifecycle = "2.9.2"
+accompanist = "0.37.3"  # Update if needed
 activityCompose = "1.10.1"
-
-# Hilt - Specified Version
-hilt = "2.57"
-
-# Network & Serialization
-retrofit = "3.0.0"
-okhttp = "5.1.0"
-kotlinxSerialization = "1.9.0"
-
-# Utilities
-timber = "5.0.1"
-coilCompose = "2.7.0"
-coreLibraryDesugaring = "2.1.5"
-
-# Documentation
-dokka = "2.0.0"
-
-# Room Database
-roomVersion = "2.7.2"
-
-# Accompanist
-accompanist = "0.37.3"
-
-# Memory Leak Detection  
-leakcanary = "2.14"
-
-# Testing - Java 24 Compatible
-junit = "5.13.4"
-extJunit = "1.3.0"
-espresso = "3.7.0"
-mockk = "1.14.5"
-turbine = "1.2.1"
 archCoreTesting = "2.2.0"
+coilCompose = "2.7.0"
+compose = "1.9.0"
+composeBom = "2025.08.00"
+composeCompiler = "1.6.0"
+compileSdk = "36"
+coreKtx = "1.16.0"
+coreLibraryDesugaring = "2.1.5"
 coroutinesTest = "1.10.2"
-
-# Coroutines
-kotlinxCoroutines = "1.10.2"
-
-# Code Quality - Java 24 Compatible
-spotless = "7.2.1"
-detekt = "1.23.8"
-
-# OpenAPI Generator - Genesis Protocol Integration
+detekt = "1.23.8"  # Ensure latest
+dokka = "2.0.0"  # Up from 1.9.x
+espresso = "3.7.0"
+extJunit = "1.3.0"
+firebaseBom = "34.0.0"
+firebaseCrashlytics = "3.0.2"
+firebasePerf = "1.4.2"
+gradle = "9.0.0"  # Latest stable version
+googleServices = "4.4.3"
+xposed = "82"
+lsposed = "1.9.4"
+yuki = "1.3.6"
+hilt = "2.57"
+java-target = "24"     # Bytecode target (Java 24)
+java-toolchain = "24"
+junit = "5.13.4"
+ksp = "2.2.0-2.0.2"
+kotlin = "2.2.0"
+kotlinxCoroutines = "1.10.3"
+kotlinxSerialization = "1.9.0"
+ktlint = "0.50.0"  # For Spotless
+leakcanary = "2.14"
+lifecycle = "2.9.2"
+material3 = "1.3.2"
+minSdk = "33"
+mockk = "1.14.5"
+okhttp = "5.1.0"
 openapi-generator = "7.14.0"
+retrofit = "3.0.0"
+roomVersion = "2.7.2"
+spotless = "7.2.1"  # Ensure latest
+targetSdk = "36"
+timber = "5.0.1"
+turbine = "1.2.1"
+ndkVersion = "27.2.12479018"
+cmakeVersion = "3.29.2"
 
 [plugins]
 # Core Android - NO VERSION NUMBERS
@@ -92,6 +75,11 @@ openapi-generator = { id = "org.openapi.generator", version.ref = "openapi-gener
 
 # Documentation
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+
+# Firebase & Google Services
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
+firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerf" }
 
 [libraries]
 # AndroidX Core
@@ -154,6 +142,25 @@ kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 # Memory Leak Detection
 leakcanary-android = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakcanary" }
 
+# Firebase BOM and Services
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebase-performance = { group = "com.google.firebase", name = "firebase-perf-ktx" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore-ktx" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage-ktx" }
+
+# Xposed/LSPosed Framework
+xposed-api = { group = "de.robv.android.xposed", name = "api", version.ref = "xposed" }
+lsposed-api = { group = "io.github.libxposed", name = "api", version.ref = "lsposed" }
+lsposed-service = { group = "io.github.libxposed", name = "service", version.ref = "lsposed" }
+
+# Yuki Hook API
+yuki-api = { group = "com.highcapable.yukihookapi", name = "api", version.ref = "yuki" }
+yuki-ksp-xposed = { group = "com.highcapable.yukihookapi", name = "ksp-xposed", version.ref = "yuki" }
+
 [bundles]
 # Compose - Genesis UI System
 compose = [
@@ -184,4 +191,23 @@ testing = [
     "turbine",
     "androidx-core-testing",
     "kotlinx-coroutines-test"
+]
+
+# Firebase - Genesis Cloud Services
+firebase = [
+    "firebase-analytics",
+    "firebase-crashlytics", 
+    "firebase-performance",
+    "firebase-messaging",
+    "firebase-auth",
+    "firebase-firestore",
+    "firebase-storage"
+]
+
+# Xposed Framework - Genesis Hook System
+xposed = [
+    "xposed-api",
+    "lsposed-api", 
+    "lsposed-service",
+    "yuki-api"
 ]

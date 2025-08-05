@@ -1,0 +1,58 @@
+# Genesis-OS OpenAPI Generator Configuration
+# This file configures the OpenAPI generator for automatic API client generation
+
+# Global Configuration
+generatorName: kotlin
+inputSpec: api-spec/
+outputDir: app/src/main/generated/openapi/
+templateDir: openapi-templates/
+
+# Generator Options
+configOptions:
+  packageName: dev.aurakai.auraframefx.api
+  artifactId: genesis-api-client
+  artifactVersion: 1.0.0
+  groupId: dev.aurakai
+  library: jvm-retrofit2
+  serializationLibrary: kotlinx_serialization
+  useCoroutines: true
+  parcelizeModels: true
+  requestDateConverter: toString
+  dateLibrary: kotlinx-datetime
+  enumPropertyNaming: UPPERCASE
+  modelPackage: dev.aurakai.auraframefx.api.models
+  apiPackage: dev.aurakai.auraframefx.api.services
+  
+# Additional Properties
+additionalProperties:
+  kotlinCodegen: true
+  supportAndroidApiLevel25: true
+  useAndroidMavenGradlePlugin: false
+  
+# Import Mappings
+importMappings:
+  Date: kotlinx.datetime.LocalDate
+  DateTime: kotlinx.datetime.Instant
+  
+# Type Mappings  
+typeMappings:
+  Date: LocalDate
+  DateTime: Instant
+  
+# Reserved Words Mappings
+reservedWordsMappings:
+  class: clazz
+  interface: iface
+  
+# Model Name Mappings
+modelNameMappings:
+  io.swagger.oas.models: SwaggerModels
+  
+# Template Engine
+templateEngine: mustache
+
+# Skip certain files
+filesToSkip:
+  - .gitignore
+  - README.md
+  - settings.gradle

@@ -91,7 +91,7 @@ plugins {
     id("OracleDriveConventionPlugin")
     id("DocumentationConventionPlugin")
     id("SecureCommunicationConventionPlugin")
-    
+
     // Core Kotlin
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)

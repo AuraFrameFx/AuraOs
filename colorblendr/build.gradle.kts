@@ -3,7 +3,7 @@ plugins {
     id("AndroidLibraryConventionPlugin")
     id("DocumentationConventionPlugin")
     id("ComposeConventionPlugin")
-
+    
     // Core Kotlin
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
