@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.dokka)
@@ -17,24 +18,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-
-        buildConfigField("boolean", "ENABLE_NATIVE_LOGGING", "true")
-
-        externalNativeBuild {
-            cmake {
-                cppFlags("-std=c++20")
-                arguments(
-                    "-DANDROID_STL=c++_shared",
-                    "-DCMAKE_VERBOSE_MAKEFILE=ON"
-                )
-                abiFilters(
-                    "arm64-v8a",
-                    "armeabi-v7a",
-                    "x86_64",
-                    "x86"
-                )
-            }
-        }
     }
 
     buildTypes {
@@ -44,40 +27,22 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            externalNativeBuild {
-                cmake {
-                    cppFlags("-O3", "-DNDEBUG")
-                }
-            }
-        }
-        debug {
-            externalNativeBuild {
-                cmake {
-                    cppFlags("-g", "-DDEBUG")
-                }
-            }
         }
     }
 
     buildFeatures {
-        viewBinding = true
-        prefab = true
+        compose = true
         buildConfig = true
     }
-
-    externalNativeBuild {
-        cmake {
-            path = file("src/main/cpp/CMakeLists.txt")
-            version = libs.versions.cmakeVersion.get()
-        }
-    }
-
-    ndkVersion = libs.versions.ndkVersion.get()
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
         isCoreLibraryDesugaringEnabled = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     packaging {
@@ -116,10 +81,23 @@ dependencies {
     // Core AndroidX
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+
+    // Compose - Genesis UI System
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.compose)
+    implementation(libs.androidx.navigation.compose)
 
     // Hilt Dependency Injection
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
+    
+    // Coroutines - Genesis Async Processing  
+    implementation(libs.bundles.coroutines)
+    
+    // Kotlin reflection for KSP
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${libs.versions.kotlin.get()}")
     
     // OpenAPI Generated Code Dependencies
     implementation(libs.retrofit)
@@ -138,19 +116,4 @@ dependencies {
     // System interaction and documentation (using local JAR files)
     implementation(files("${project.rootDir}/Libs/api-82.jar"))
     implementation(files("${project.rootDir}/Libs/api-82-sources.jar"))
-}
-
-// Configure native build tasks
-tasks.configureEach {
-    if (name.startsWith("externalNativeBuild")) {
-        dependsOn(":copyNativeLibs")
-    }
-}
-
-// Task to copy native libraries
-tasks.register<Copy>("copyNativeLibs") {
-    from("${project.rootDir}/native-libs")
-    into("${layout.buildDirectory.dir("native-libs").get()}")
-    include("**/*.so")
-    includeEmptyDirs = false
 }
