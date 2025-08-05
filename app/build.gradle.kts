@@ -159,6 +159,9 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+    
+    // AppCompat (needed for themes and compatibility)
+    implementation("androidx.appcompat:appcompat:1.7.0")
 
     // Compose - Genesis UI System
     implementation(platform(libs.androidx.compose.bom))
