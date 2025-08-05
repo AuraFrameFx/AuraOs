@@ -1,10 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt.android)
-    alias(libs.plugins.ksp)
+    // Temporarily disable Hilt to debug build issues
+    // alias(libs.plugins.hilt.android)
+    // alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.compose)
+    // Android Parcelize for generated code
+    id("kotlin-parcelize")
     // alias(libs.plugins.google.services) // Uncomment if defined in [plugins] in libs.versions.toml
     // alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
     // alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
@@ -168,21 +171,24 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.androidx.navigation.compose)
 
-    // Hilt - Genesis AI Dependency Injection
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-    implementation(libs.hilt.navigation.compose)
+    // Hilt - Genesis AI Dependency Injection (temporarily disabled)
+    // implementation(libs.hilt.android)
+    // ksp(libs.hilt.compiler)
+    // implementation(libs.hilt.navigation.compose)
 
     // Coroutines - Genesis Async Processing  
     implementation(libs.bundles.coroutines)
 
     // Network - Genesis Protocol Communication (includes Retrofit + Serialization)
     implementation(libs.bundles.network)
+    
+    // Additional Retrofit converters for OpenAPI generated code
+    implementation("com.squareup.retrofit2:converter-scalars:2.11.0")
 
-    // Room Database - Genesis Memory Persistence
+    // Room Database - Genesis Memory Persistence (temporarily disabled KSP)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
+    // ksp(libs.room.compiler)
 
     // Utilities - Genesis Protocol Support
     implementation(libs.timber)
@@ -214,8 +220,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.hilt.android.testing)
-    kspAndroidTest(libs.hilt.compiler)
+    // androidTestImplementation(libs.hilt.android.testing)
+    // kspAndroidTest(libs.hilt.compiler)
 
     // Debug implementations
     debugImplementation(libs.androidx.compose.ui.tooling)
