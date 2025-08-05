@@ -1,12 +1,6 @@
 // Genesis-OS Root Build Configuration with Documentation & Services
 plugins {
     id("org.jetbrains.dokka") version "1.9.20" apply false // Updated Dokka plugin
-    alias(libs.plugins.kotlin.android) apply false // Kotlin Android plugin for subprojects
-    alias(libs.plugins.kotlin.jvm) apply false // Kotlin JVM plugin for subprojects
-    alias(libs.plugins.android.application) apply false // Android application plugin
-    alias(libs.plugins.android.library) apply false // Android library plugin
-    alias(libs.plugins.hilt.android) apply false // Hilt plugin for subprojects
-    alias(libs.plugins.ksp) apply false // KSP plugin for subprojects
     alias(libs.plugins.google.services) apply false
     alias(libs.plugins.spotless) apply false
     alias(libs.plugins.openapi.generator) apply true // OpenAPI Generator plugin for root scripts

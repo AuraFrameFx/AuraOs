@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App Information -->
-    <string name="app_name">AuraFrameFX</string>
     <string name="app_title">AURAFRAMEFX</string>
 
     <!-- Common UI Elements -->
