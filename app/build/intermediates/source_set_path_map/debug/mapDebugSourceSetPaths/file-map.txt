@@ -1,77 +1,69 @@
-dev.aurakai.auraframefx.app-jetified-datastore-preferences-release-0 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0055afe07be7f7a02144075578c6bed9\transformed\jetified-datastore-preferences-release\res
-dev.aurakai.auraframefx.app-jetified-savedstate-ktx-1.3.1-1 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\01c66692a8af1386e8ea135ac9743064\transformed\jetified-savedstate-ktx-1.3.1\res
-dev.aurakai.auraframefx.app-sqlite-2.4.0-2 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\031be35f485fe400423deedd941fe2aa\transformed\sqlite-2.4.0\res
-dev.aurakai.auraframefx.app-jetified-emoji2-views-helper-1.4.0-3 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\06dfb324ff9805948351e52fb1634509\transformed\jetified-emoji2-views-helper-1.4.0\res
-dev.aurakai.auraframefx.app-jetified-emoji2-1.4.0-4 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0873a3e3bfae5dfef0ff1ddd8a572d5b\transformed\jetified-emoji2-1.4.0\res
-dev.aurakai.auraframefx.app-room-runtime-2.6.1-5 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0ac2c9024c367bbc08ff90441394c103\transformed\room-runtime-2.6.1\res
-dev.aurakai.auraframefx.app-fragment-1.5.4-6 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\0aeb3b5b8da488aea6b385ed29e6037a\transformed\fragment-1.5.4\res
-dev.aurakai.auraframefx.app-jetified-ui-geometry-release-7 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\1000fa270f8b6f4109db1528fc2bd12b\transformed\jetified-ui-geometry-release\res
-dev.aurakai.auraframefx.app-jetified-hilt-navigation-compose-1.2.0-8 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\160681020e0e69ac8849bf25bbb1420b\transformed\jetified-hilt-navigation-compose-1.2.0\res
-dev.aurakai.auraframefx.app-jetified-activity-1.10.1-9 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\1baed37a97d1675723f1f885d4664ab1\transformed\jetified-activity-1.10.1\res
-dev.aurakai.auraframefx.app-appcompat-1.7.1-10 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\1ebef5deb543d9e67b6a226deeb2f43e\transformed\appcompat-1.7.1\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-service-2.9.2-11 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\227a4282c7dae9bd0c75e656b42359db\transformed\jetified-lifecycle-service-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-material-ripple-release-12 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\2525868f7adc429b5aa49b3a7e3b1a1d\transformed\jetified-material-ripple-release\res
-dev.aurakai.auraframefx.app-jetified-runtime-release-13 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\25d5ee5d4e9aaaadb8088ff416f47008\transformed\jetified-runtime-release\res
-dev.aurakai.auraframefx.app-lifecycle-livedata-core-2.9.2-14 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\27c1153e2e98b06c9a096ab3000088da\transformed\lifecycle-livedata-core-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-ui-util-release-15 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\27fbbf3c136ec3e08dc9ec89973095dd\transformed\jetified-ui-util-release\res
-dev.aurakai.auraframefx.app-work-runtime-ktx-2.10.3-16 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\288bd862d624a6ee4a776f66090a63ac\transformed\work-runtime-ktx-2.10.3\res
-dev.aurakai.auraframefx.app-jetified-core-viewtree-1.0.0-17 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\2e99b490c6704a73f890e273f5438028\transformed\jetified-core-viewtree-1.0.0\res
-dev.aurakai.auraframefx.app-navigation-runtime-ktx-2.5.1-18 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\3631ab1d40ea924daedf01ced39c5e83\transformed\navigation-runtime-ktx-2.5.1\res
-dev.aurakai.auraframefx.app-jetified-profileinstaller-1.4.0-19 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\372e0a06da769c3f641490bbc5f3b637\transformed\jetified-profileinstaller-1.4.0\res
-dev.aurakai.auraframefx.app-jetified-material3-release-20 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\38a37236872df089b8ae8d01da1eda09\transformed\jetified-material3-release\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-livedata-ktx-2.9.2-21 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\3ae203bfc2834dba8ac573b551fc3e6a\transformed\jetified-lifecycle-livedata-ktx-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-ui-release-22 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\3b0b66187e1726fece6bc161d7f69fa0\transformed\jetified-ui-release\res
-dev.aurakai.auraframefx.app-jetified-tracing-1.2.0-23 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\3d50d7a8ff9f66572bfc1c47b7d0d1ad\transformed\jetified-tracing-1.2.0\res
-dev.aurakai.auraframefx.app-jetified-datastore-preferences-core-release-24 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\3dde4c94f73ffc93b51de8efa1355e59\transformed\jetified-datastore-preferences-core-release\res
-dev.aurakai.auraframefx.app-navigation-runtime-2.5.1-25 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\405459b492c4b5cb7046e59e46ba7583\transformed\navigation-runtime-2.5.1\res
-dev.aurakai.auraframefx.app-jetified-tracing-ktx-1.2.0-26 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\43d011e8f02774dbaf45335bf259e6e3\transformed\jetified-tracing-ktx-1.2.0\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-compose-release-27 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\445d5062c24ed3e6fa291c55351453c4\transformed\jetified-lifecycle-viewmodel-compose-release\res
-dev.aurakai.auraframefx.app-jetified-ui-graphics-release-28 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\487da3012357f12ac1240a5086896f57\transformed\jetified-ui-graphics-release\res
-dev.aurakai.auraframefx.app-work-runtime-2.10.3-29 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\4fc909f92bb35dcf20b8a3c3ac7cf493\transformed\work-runtime-2.10.3\res
-dev.aurakai.auraframefx.app-jetified-ui-text-release-30 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\5473fe2482483a9168a19cac47d94ba0\transformed\jetified-ui-text-release\res
-dev.aurakai.auraframefx.app-jetified-ui-tooling-release-31 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\59d1fef0ddb4f45794c297e81e5d95e2\transformed\jetified-ui-tooling-release\res
-dev.aurakai.auraframefx.app-jetified-ui-tooling-preview-release-32 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\5cdd621b684e3442e82f9ba35ad36367\transformed\jetified-ui-tooling-preview-release\res
-dev.aurakai.auraframefx.app-jetified-room-ktx-2.6.1-33 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\622237e7271248134fd84d76fb54eacf\transformed\jetified-room-ktx-2.6.1\res
-dev.aurakai.auraframefx.app-jetified-activity-compose-1.10.1-34 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\64b224ee7ac01d515fc65a21c9d56389\transformed\jetified-activity-compose-1.10.1\res
-dev.aurakai.auraframefx.app-jetified-datastore-release-35 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\673c63440452168e0f6d595f31e40bbf\transformed\jetified-datastore-release\res
-dev.aurakai.auraframefx.app-jetified-runtime-saveable-release-36 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\67fe90bf86c8554100c1578fd6be9d9f\transformed\jetified-runtime-saveable-release\res
-dev.aurakai.auraframefx.app-jetified-datastore-core-release-37 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\69b814c4cca611725f009ed6a378ec36\transformed\jetified-datastore-core-release\res
-dev.aurakai.auraframefx.app-jetified-material-icons-core-release-38 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\6c0139245192aa7bebb5d1dc41a60c85\transformed\jetified-material-icons-core-release\res
-dev.aurakai.auraframefx.app-navigation-common-ktx-2.5.1-39 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\7959db85bfae548edba19c96562c6f05\transformed\navigation-common-ktx-2.5.1\res
-dev.aurakai.auraframefx.app-jetified-navigation-compose-2.5.1-40 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\79c8d692ec14cb6a749099e5c3c72324\transformed\jetified-navigation-compose-2.5.1\res
-dev.aurakai.auraframefx.app-core-runtime-2.2.0-41 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\80509b99ba402e3a3b4b7a1333aff67b\transformed\core-runtime-2.2.0\res
-dev.aurakai.auraframefx.app-jetified-startup-runtime-1.2.0-42 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\838fab7992566b7dbce58de67fc4f907\transformed\jetified-startup-runtime-1.2.0\res
-dev.aurakai.auraframefx.app-jetified-animation-release-43 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\87ebbfe310aae7edfa55d9c7705be714\transformed\jetified-animation-release\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-release-44 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\89f12d3cfa194c069121abfc8fda5e2c\transformed\jetified-lifecycle-viewmodel-release\res
-dev.aurakai.auraframefx.app-jetified-hilt-work-1.2.0-45 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\8caff7c5f2ebf0b649897d8f7c28e583\transformed\jetified-hilt-work-1.2.0\res
-dev.aurakai.auraframefx.app-jetified-graphics-path-1.0.1-46 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\91a374bf91cfd9c3f85afe809e97005c\transformed\jetified-graphics-path-1.0.1\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-livedata-core-ktx-2.9.2-47 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\994f609fd9cd1b023f5e111e1e747b1d\transformed\jetified-lifecycle-livedata-core-ktx-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-process-2.9.2-48 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\9ac185615faf75b46cf94aa7b869a9ce\transformed\jetified-lifecycle-process-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-annotation-experimental-1.4.1-49 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\a31168a1671f2c4a6529df2628b7e251\transformed\jetified-annotation-experimental-1.4.1\res
-dev.aurakai.auraframefx.app-lifecycle-livedata-2.9.2-50 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\ac27825f7ae8fbca1a01b66974cf8651\transformed\lifecycle-livedata-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-runtime-release-51 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\b1c89aa863ac2de48ed24a625bc55cf6\transformed\jetified-lifecycle-runtime-release\res
-dev.aurakai.auraframefx.app-jetified-foundation-layout-release-52 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\b2d46472f521cc00389b9a05716759d6\transformed\jetified-foundation-layout-release\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-savedstate-release-53 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\b5d570c5babd76fe1290972833fff31e\transformed\jetified-lifecycle-viewmodel-savedstate-release\res
-dev.aurakai.auraframefx.app-jetified-hilt-navigation-1.2.0-54 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\bd837b4d3383e8239132e30e1668cdb9\transformed\jetified-hilt-navigation-1.2.0\res
-dev.aurakai.auraframefx.app-sqlite-framework-2.4.0-55 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\c10830cf7c72bd6f8dcc4e15386a21d2\transformed\sqlite-framework-2.4.0\res
-dev.aurakai.auraframefx.app-jetified-savedstate-release-56 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\c4b7d9e42d1dbe6a9d4bf7119fcac044\transformed\jetified-savedstate-release\res
-dev.aurakai.auraframefx.app-jetified-activity-ktx-1.10.1-57 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\c4e21d4d753eda674cfb65cea1104ced\transformed\jetified-activity-ktx-1.10.1\res
-dev.aurakai.auraframefx.app-navigation-common-2.5.1-58 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\c7a22d840f9cb1defca5d5333bafa4ca\transformed\navigation-common-2.5.1\res
-dev.aurakai.auraframefx.app-jetified-animation-core-release-59 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\cbf3df6a846f31d8a60d6cb01a1f0032\transformed\jetified-animation-core-release\res
-dev.aurakai.auraframefx.app-jetified-ui-unit-release-60 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d31723e0b922b8c1ae3b765179633da6\transformed\jetified-ui-unit-release\res
-dev.aurakai.auraframefx.app-jetified-foundation-release-61 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d3272ff48cd17ce46dfca64e1d99b217\transformed\jetified-foundation-release\res
-dev.aurakai.auraframefx.app-jetified-material-release-62 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d585649db3a9d7a0108b9e109b9e349c\transformed\jetified-material-release\res
-dev.aurakai.auraframefx.app-jetified-ui-tooling-data-release-63 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d589a6f7ca8689c57216dbd0b4971c7b\transformed\jetified-ui-tooling-data-release\res
-dev.aurakai.auraframefx.app-jetified-core-ktx-1.16.0-64 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d68cb3a17b3bc97ffe705db12d66a061\transformed\jetified-core-ktx-1.16.0\res
-dev.aurakai.auraframefx.app-jetified-appcompat-resources-1.7.1-65 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d76bf46986ddff05afe54b89b5f666ce\transformed\jetified-appcompat-resources-1.7.1\res
-dev.aurakai.auraframefx.app-jetified-customview-poolingcontainer-1.0.0-66 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\d7fb3ecaadd02abad6ad35617cc273c9\transformed\jetified-customview-poolingcontainer-1.0.0\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-runtime-compose-release-67 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\da0c97a809c704c6561679b99e4f6534\transformed\jetified-lifecycle-runtime-compose-release\res
-dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-ktx-2.9.2-68 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\e21803295c5a4be48d76721c5a8d042d\transformed\jetified-lifecycle-viewmodel-ktx-2.9.2\res
-dev.aurakai.auraframefx.app-jetified-ui-test-manifest-1.8.3-69 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\ee33ab3c2aa3d9a94463d872291d85b4\transformed\jetified-ui-test-manifest-1.8.3\res
-dev.aurakai.auraframefx.app-core-1.16.0-70 C:\Android Tools\zulu24.32.13-ca-jdk24.0.2-win_x64\caches\9.0.0\transforms\f742c5a7b381948e5eddb6d6410163de\transformed\core-1.16.0\res
-dev.aurakai.auraframefx.app-resValues-71 C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\build\generated\res\resValues\debug
-dev.aurakai.auraframefx.app-packageDebugResources-72 C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-dev.aurakai.auraframefx.app-packageDebugResources-73 C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-dev.aurakai.auraframefx.app-debug-74 C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\build\intermediates\merged_res\debug\mergeDebugResources
-dev.aurakai.auraframefx.app-debug-75 C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\debug\res
-dev.aurakai.auraframefx.app-main-76 C:\Users\Wehtt\Documents\Genesis-Os\Genesis-Protocal-\app\src\main\res
+dev.aurakai.auraframefx.app-jetified-plumber-android-2.14-0 /home/runner/.gradle/caches/9.0.0/transforms/079710df1884e4f597edd37aeb52c7a4/transformed/jetified-plumber-android-2.14/res
+dev.aurakai.auraframefx.app-jetified-hilt-navigation-compose-1.2.0-1 /home/runner/.gradle/caches/9.0.0/transforms/07eff7d1a2465f46c8d2a0f91a9cca3c/transformed/jetified-hilt-navigation-compose-1.2.0/res
+dev.aurakai.auraframefx.app-jetified-material-icons-core-release-2 /home/runner/.gradle/caches/9.0.0/transforms/0dbbecfcd1cba0b0d8f028673b5fe239/transformed/jetified-material-icons-core-release/res
+dev.aurakai.auraframefx.app-jetified-activity-compose-1.9.3-3 /home/runner/.gradle/caches/9.0.0/transforms/10121d2ae3f6d28f6d3f7ce111127ffc/transformed/jetified-activity-compose-1.9.3/res
+dev.aurakai.auraframefx.app-jetified-emoji2-1.3.0-4 /home/runner/.gradle/caches/9.0.0/transforms/108bff0e9a602d4f7b7c2b972d93f548/transformed/jetified-emoji2-1.3.0/res
+dev.aurakai.auraframefx.app-jetified-core-ktx-1.15.0-5 /home/runner/.gradle/caches/9.0.0/transforms/12bfb5901e4b3e3e8916eede704d4966/transformed/jetified-core-ktx-1.15.0/res
+dev.aurakai.auraframefx.app-jetified-profileinstaller-1.4.0-6 /home/runner/.gradle/caches/9.0.0/transforms/1549909e88bbd542784a58b7e44f9945/transformed/jetified-profileinstaller-1.4.0/res
+dev.aurakai.auraframefx.app-jetified-savedstate-ktx-1.3.0-7 /home/runner/.gradle/caches/9.0.0/transforms/196d942b9032e37e3097c231c3a13446/transformed/jetified-savedstate-ktx-1.3.0/res
+dev.aurakai.auraframefx.app-jetified-runtime-release-8 /home/runner/.gradle/caches/9.0.0/transforms/1c653851333613edb8d8ba2123797a3b/transformed/jetified-runtime-release/res
+dev.aurakai.auraframefx.app-jetified-coil-base-2.7.0-9 /home/runner/.gradle/caches/9.0.0/transforms/21d9cee384a43415350b058867a3b0b3/transformed/jetified-coil-base-2.7.0/res
+dev.aurakai.auraframefx.app-jetified-ui-util-release-10 /home/runner/.gradle/caches/9.0.0/transforms/2ef97111d411f934e202c035feb417e2/transformed/jetified-ui-util-release/res
+dev.aurakai.auraframefx.app-lifecycle-livedata-2.9.0-11 /home/runner/.gradle/caches/9.0.0/transforms/37b7aa807562ea121dd26f136d7d696f/transformed/lifecycle-livedata-2.9.0/res
+dev.aurakai.auraframefx.app-jetified-material-ripple-release-12 /home/runner/.gradle/caches/9.0.0/transforms/3aed314bfbb5f0fe2649784840ded49c/transformed/jetified-material-ripple-release/res
+dev.aurakai.auraframefx.app-jetified-tracing-1.2.0-13 /home/runner/.gradle/caches/9.0.0/transforms/3bc5707ab075483733f1d8675235a0ba/transformed/jetified-tracing-1.2.0/res
+dev.aurakai.auraframefx.app-jetified-ui-unit-release-14 /home/runner/.gradle/caches/9.0.0/transforms/3c783b19d75043771f5e7e9cfc48e9c7/transformed/jetified-ui-unit-release/res
+dev.aurakai.auraframefx.app-jetified-animation-core-release-15 /home/runner/.gradle/caches/9.0.0/transforms/3d0762c646dada4976bb2ea08559d6c5/transformed/jetified-animation-core-release/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-compose-release-16 /home/runner/.gradle/caches/9.0.0/transforms/4002e0db1be18133cf6b67730685f6be/transformed/jetified-lifecycle-viewmodel-compose-release/res
+dev.aurakai.auraframefx.app-jetified-room-ktx-2.7.2-17 /home/runner/.gradle/caches/9.0.0/transforms/48ac6ff851494607f4f642c7996f2a14/transformed/jetified-room-ktx-2.7.2/res
+dev.aurakai.auraframefx.app-jetified-ui-release-18 /home/runner/.gradle/caches/9.0.0/transforms/4c3fb10796ecd964b47f6a1c2c46abd3/transformed/jetified-ui-release/res
+dev.aurakai.auraframefx.app-jetified-runtime-saveable-release-19 /home/runner/.gradle/caches/9.0.0/transforms/512dc69593d4d8ed67428810d230927c/transformed/jetified-runtime-saveable-release/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-process-2.9.0-20 /home/runner/.gradle/caches/9.0.0/transforms/51e3dca4823bf54f984fdb0097d72a0a/transformed/jetified-lifecycle-process-2.9.0/res
+dev.aurakai.auraframefx.app-jetified-core-viewtree-1.0.0-21 /home/runner/.gradle/caches/9.0.0/transforms/58b4e218e423ec3fb008c9c6261ddc6d/transformed/jetified-core-viewtree-1.0.0/res
+dev.aurakai.auraframefx.app-jetified-foundation-layout-release-22 /home/runner/.gradle/caches/9.0.0/transforms/5d24316096ceef3b2043b1ed1029c27e/transformed/jetified-foundation-layout-release/res
+dev.aurakai.auraframefx.app-core-runtime-2.2.0-23 /home/runner/.gradle/caches/9.0.0/transforms/5d50bf1fd60fe9195a34b2895a29ce18/transformed/core-runtime-2.2.0/res
+dev.aurakai.auraframefx.app-jetified-sqlite-release-24 /home/runner/.gradle/caches/9.0.0/transforms/5e790eab50fcd2805a0e410059ad5cad/transformed/jetified-sqlite-release/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-savedstate-release-25 /home/runner/.gradle/caches/9.0.0/transforms/60a4c7d7da696f688a05eef5ab1c56b5/transformed/jetified-lifecycle-viewmodel-savedstate-release/res
+dev.aurakai.auraframefx.app-jetified-startup-runtime-1.2.0-26 /home/runner/.gradle/caches/9.0.0/transforms/60d9d2b6758e921f2a4bf343744aa5b5/transformed/jetified-startup-runtime-1.2.0/res
+dev.aurakai.auraframefx.app-jetified-navigation-runtime-release-27 /home/runner/.gradle/caches/9.0.0/transforms/637594b3b180320206f17566de87978e/transformed/jetified-navigation-runtime-release/res
+dev.aurakai.auraframefx.app-jetified-ui-tooling-preview-release-28 /home/runner/.gradle/caches/9.0.0/transforms/644d7ab713fe33f53a0c4dda20d2af33/transformed/jetified-ui-tooling-preview-release/res
+dev.aurakai.auraframefx.app-jetified-ui-tooling-release-29 /home/runner/.gradle/caches/9.0.0/transforms/66c38f04157ecb28e66c64e1f0b261c1/transformed/jetified-ui-tooling-release/res
+dev.aurakai.auraframefx.app-jetified-leakcanary-object-watcher-android-core-2.14-30 /home/runner/.gradle/caches/9.0.0/transforms/6a64a1165c3ad30eb2cb47dbbc36268b/transformed/jetified-leakcanary-object-watcher-android-core-2.14/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-release-31 /home/runner/.gradle/caches/9.0.0/transforms/6a800d95316b262f2d5c751ff6b6c5ed/transformed/jetified-lifecycle-viewmodel-release/res
+dev.aurakai.auraframefx.app-jetified-ui-geometry-release-32 /home/runner/.gradle/caches/9.0.0/transforms/79b695a2b9309fcea8c74c52a94986b3/transformed/jetified-ui-geometry-release/res
+dev.aurakai.auraframefx.app-jetified-room-runtime-release-33 /home/runner/.gradle/caches/9.0.0/transforms/7f1604c49c3089f31d404cc67a0ab262/transformed/jetified-room-runtime-release/res
+dev.aurakai.auraframefx.app-jetified-customview-poolingcontainer-1.0.0-34 /home/runner/.gradle/caches/9.0.0/transforms/7f8e548193d1b92915bf0d11208f1fc6/transformed/jetified-customview-poolingcontainer-1.0.0/res
+dev.aurakai.auraframefx.app-jetified-graphics-path-1.0.1-35 /home/runner/.gradle/caches/9.0.0/transforms/82f601fa8374284ddcfdb017daf0f58b/transformed/jetified-graphics-path-1.0.1/res
+dev.aurakai.auraframefx.app-jetified-savedstate-compose-release-36 /home/runner/.gradle/caches/9.0.0/transforms/87751e31a71bb9dbd0c73a5b4bccf9d7/transformed/jetified-savedstate-compose-release/res
+dev.aurakai.auraframefx.app-jetified-foundation-release-37 /home/runner/.gradle/caches/9.0.0/transforms/93a25748cf6bd7a03ab161a8382c68ba/transformed/jetified-foundation-release/res
+dev.aurakai.auraframefx.app-jetified-animation-release-38 /home/runner/.gradle/caches/9.0.0/transforms/9858e9ea2880dccf7d2d601e3bd5ea67/transformed/jetified-animation-release/res
+dev.aurakai.auraframefx.app-jetified-ui-graphics-release-39 /home/runner/.gradle/caches/9.0.0/transforms/9a1039141f9f98528aab33c554ae4f99/transformed/jetified-ui-graphics-release/res
+dev.aurakai.auraframefx.app-jetified-activity-ktx-1.9.3-40 /home/runner/.gradle/caches/9.0.0/transforms/ac44e7004f2df6bdf96171db5fe18adf/transformed/jetified-activity-ktx-1.9.3/res
+dev.aurakai.auraframefx.app-jetified-annotation-experimental-1.4.1-41 /home/runner/.gradle/caches/9.0.0/transforms/b8710bb3c849a9f2e0f3597c059b4e1f/transformed/jetified-annotation-experimental-1.4.1/res
+dev.aurakai.auraframefx.app-jetified-ui-tooling-data-release-42 /home/runner/.gradle/caches/9.0.0/transforms/b951da3f6ec11986de342fcf945ad100/transformed/jetified-ui-tooling-data-release/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-runtime-release-43 /home/runner/.gradle/caches/9.0.0/transforms/bc26600087baa09c4f1be94e7dacc9a5/transformed/jetified-lifecycle-runtime-release/res
+dev.aurakai.auraframefx.app-jetified-ui-text-release-44 /home/runner/.gradle/caches/9.0.0/transforms/bcf4d10ff8ae83896185557b4adcb985/transformed/jetified-ui-text-release/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-livedata-core-ktx-2.9.0-45 /home/runner/.gradle/caches/9.0.0/transforms/c16590799db7bcb6272b37211987c54f/transformed/jetified-lifecycle-livedata-core-ktx-2.9.0/res
+dev.aurakai.auraframefx.app-jetified-leakcanary-android-core-2.14-46 /home/runner/.gradle/caches/9.0.0/transforms/c3f82e9e2cf81958ad01b899b1d68ffa/transformed/jetified-leakcanary-android-core-2.14/res
+dev.aurakai.auraframefx.app-jetified-ui-test-manifest-1.7.8-47 /home/runner/.gradle/caches/9.0.0/transforms/c4a5b9ae573cbaf73e3b13f2e2eca785/transformed/jetified-ui-test-manifest-1.7.8/res
+dev.aurakai.auraframefx.app-jetified-appcompat-resources-1.6.1-48 /home/runner/.gradle/caches/9.0.0/transforms/c898d4b681fb0016d3e717ab10e9e79a/transformed/jetified-appcompat-resources-1.6.1/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-runtime-compose-release-49 /home/runner/.gradle/caches/9.0.0/transforms/cc14acefa1a0097b91f845362c95874a/transformed/jetified-lifecycle-runtime-compose-release/res
+dev.aurakai.auraframefx.app-jetified-hilt-navigation-1.2.0-50 /home/runner/.gradle/caches/9.0.0/transforms/d06009f2e89b9a7063f870c5a8766d84/transformed/jetified-hilt-navigation-1.2.0/res
+dev.aurakai.auraframefx.app-jetified-navigation-compose-release-51 /home/runner/.gradle/caches/9.0.0/transforms/d373fd351d38bc4253d852a6c4737261/transformed/jetified-navigation-compose-release/res
+dev.aurakai.auraframefx.app-jetified-savedstate-release-52 /home/runner/.gradle/caches/9.0.0/transforms/d967881b30fab7c84bb1341d5e010939/transformed/jetified-savedstate-release/res
+dev.aurakai.auraframefx.app-jetified-leakcanary-object-watcher-android-2.14-53 /home/runner/.gradle/caches/9.0.0/transforms/de4e768fa3c976cb96ade96c3c95754b/transformed/jetified-leakcanary-object-watcher-android-2.14/res
+dev.aurakai.auraframefx.app-jetified-material-release-54 /home/runner/.gradle/caches/9.0.0/transforms/e2e65e6e93706af56ccd4c70c4623ca4/transformed/jetified-material-release/res
+dev.aurakai.auraframefx.app-lifecycle-livedata-core-2.9.0-55 /home/runner/.gradle/caches/9.0.0/transforms/e4a516b634d00bf617e0e98108e1ef7d/transformed/lifecycle-livedata-core-2.9.0/res
+dev.aurakai.auraframefx.app-jetified-lifecycle-viewmodel-ktx-2.9.0-56 /home/runner/.gradle/caches/9.0.0/transforms/e90347fb391c14df5b49e86973ec416e/transformed/jetified-lifecycle-viewmodel-ktx-2.9.0/res
+dev.aurakai.auraframefx.app-jetified-activity-1.9.3-57 /home/runner/.gradle/caches/9.0.0/transforms/eb9d856f992752e1fb4a30f8986a0a12/transformed/jetified-activity-1.9.3/res
+dev.aurakai.auraframefx.app-jetified-material3-release-58 /home/runner/.gradle/caches/9.0.0/transforms/f04fd1745aa96aa528d8f713c4f21c21/transformed/jetified-material3-release/res
+dev.aurakai.auraframefx.app-jetified-navigation-common-release-59 /home/runner/.gradle/caches/9.0.0/transforms/f82361f5b3ebff4f448fd8c8e29f66a0/transformed/jetified-navigation-common-release/res
+dev.aurakai.auraframefx.app-core-1.15.0-60 /home/runner/.gradle/caches/9.0.0/transforms/fb195c5be5b74c12fac1cb4a0a742f21/transformed/core-1.15.0/res
+dev.aurakai.auraframefx.app-fragment-1.5.1-61 /home/runner/.gradle/caches/9.0.0/transforms/fdf874dd59dd259d8eab1578edebce98/transformed/fragment-1.5.1/res
+dev.aurakai.auraframefx.app-jetified-sqlite-framework-release-62 /home/runner/.gradle/caches/9.0.0/transforms/ff23c67301cbd45a9bb3208c618d3f52/transformed/jetified-sqlite-framework-release/res
+dev.aurakai.auraframefx.app-resValues-63 /home/runner/work/AuraOs/AuraOs/app/build/generated/res/resValues/debug
+dev.aurakai.auraframefx.app-packageDebugResources-64 /home/runner/work/AuraOs/AuraOs/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+dev.aurakai.auraframefx.app-packageDebugResources-65 /home/runner/work/AuraOs/AuraOs/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+dev.aurakai.auraframefx.app-debug-66 /home/runner/work/AuraOs/AuraOs/app/build/intermediates/merged_res/debug/mergeDebugResources
+dev.aurakai.auraframefx.app-debug-67 /home/runner/work/AuraOs/AuraOs/app/src/debug/res
+dev.aurakai.auraframefx.app-main-68 /home/runner/work/AuraOs/AuraOs/app/src/main/res
