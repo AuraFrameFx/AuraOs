@@ -3,9 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.compose)
-    // Temporarily disabled to resolve build issues
-    // alias(libs.plugins.hilt.android)
-    // alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.dokka)
     alias(libs.plugins.spotless)
 }
@@ -67,6 +66,7 @@ kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
         freeCompilerArgs.addAll(
+            "-Xuse-k2",
             "-opt-in=kotlin.RequiresOptIn",
             "-Xjvm-default=all"
         )
@@ -76,6 +76,7 @@ kotlin {
 dependencies {
     // Project modules
     implementation(project(":core-module"))
+    // Note: datavein-oracle-drive was removed from settings.gradle.kts
 
     // Core AndroidX
     implementation(libs.androidx.core.ktx)
@@ -87,16 +88,16 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.androidx.navigation.compose)
 
-    // Temporarily disabled Hilt to resolve build issues
-    // implementation(libs.hilt.android)
-    // ksp(libs.hilt.compiler)
-    // implementation(libs.hilt.navigation.compose)
+    // Hilt Dependency Injection
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
     
     // Coroutines - Genesis Async Processing  
     implementation(libs.bundles.coroutines)
     
-    // Kotlin reflection for KSP (disabled for now)
-    // implementation("org.jetbrains.kotlin:kotlin-reflect:${libs.versions.kotlin.get()}")
+    // Kotlin reflection for KSP
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${libs.versions.kotlin.get()}")
     
     // OpenAPI Generated Code Dependencies
     implementation(libs.retrofit)

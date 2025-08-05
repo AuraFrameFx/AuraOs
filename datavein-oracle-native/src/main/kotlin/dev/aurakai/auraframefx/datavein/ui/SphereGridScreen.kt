@@ -20,8 +20,10 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.runtime.rememberCoroutineScope
 import dev.aurakai.auraframefx.datavein.model.*
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlin.math.*
 import kotlin.random.Random
 
@@ -39,6 +41,7 @@ fun DataVeinSphereGrid(
     var animatingNodes by remember { mutableStateOf<Set<String>>(emptySet()) }
     var dataFlows by remember { mutableStateOf<Map<String, Long>>(emptyMap()) }
     
+    val coroutineScope = rememberCoroutineScope()
     val gridData = remember { generateSphereGrid(config) }
     
     // Data flow animation
@@ -115,8 +118,8 @@ fun DataVeinSphereGrid(
                         animatingNodes = connectedNodeIds.toSet()
                         
                         // Clear animation after delay
-                        kotlinx.coroutines.launch {
-                            delay(1500)
+                        coroutineScope.launch {
+                            kotlinx.coroutines.delay(1500)
                             animatingNodes = emptySet()
                         }
                     }

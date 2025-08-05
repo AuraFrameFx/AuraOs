@@ -67,6 +67,7 @@ kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
         freeCompilerArgs.addAll(
+            "-Xuse-k2",
             "-opt-in=kotlin.RequiresOptIn",
             "-Xjvm-default=all"
         )
