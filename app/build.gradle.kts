@@ -117,9 +117,6 @@ android {
         }
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-    }
 
     packaging {
         resources {
@@ -155,9 +152,9 @@ afterEvaluate {
     )
 }
 
-// Kotlin Toolchain - Java 21
+// Kotlin Toolchain - Java 22
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(22)
 }
 
 dependencies {

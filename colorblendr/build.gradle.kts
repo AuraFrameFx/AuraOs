@@ -44,10 +44,6 @@ android {
         compose = true
         buildConfig = true
     }
-
-    composerOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-    }
     
     packaging {
         resources {
@@ -56,9 +52,9 @@ android {
     }
 }
 
-// Kotlin Toolchain - Java 21
+// Kotlin Toolchain - Java 22
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(22)
 }
 
 group = "dev.aurakai"
@@ -108,7 +104,7 @@ dependencies {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.fromTarget("24"))
         apiVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_2)
         languageVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_2)
 
