@@ -129,7 +129,7 @@ android {
         kotlinCompilerExtensionVersion = "1.4.8" // Compatible with Kotlin 1.8.22
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
