@@ -39,13 +39,13 @@ rootProject.name = "Genesis-Os"
 // Genesis Protocol - Core Modules
 include(":app")
 
-// Genesis Protocol - AI Ecosystem Modules 
-include(":core-module")
-include(":feature-module") 
-include(":datavein-oracle-native")
-include(":secure-comm")
-include(":sandbox-ui")
-include(":collab-canvas")
-include(":colorblendr")
+// Genesis Protocol - AI Ecosystem Modules - temporarily disabled for basic APK build
+// include(":core-module")
+// include(":feature-module") 
+// include(":datavein-oracle-native")
+// include(":secure-comm")
+// include(":sandbox-ui")
+// include(":collab-canvas")
+// include(":colorblendr")
 
 // Removed modules: datavein-oracle-drive, oracle-drive-integration
