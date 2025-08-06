@@ -1,9 +1,9 @@
 // Genesis-OS Root Build Configuration with Documentation & Services
 plugins {
     alias(libs.plugins.dokka) apply false // Use version from catalog
-    alias(libs.plugins.google.services) apply false
+    // alias(libs.plugins.google.services) apply false // Temporarily disabled
     alias(libs.plugins.spotless) apply false
-    alias(libs.plugins.openapi.generator) apply true // OpenAPI Generator plugin for root scripts
+    // alias(libs.plugins.openapi.generator) apply true // Temporarily disabled
 }
 
 allprojects {

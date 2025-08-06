@@ -1,21 +1,22 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt.android)
-    alias(libs.plugins.ksp)
+    // alias(libs.plugins.hilt.android) // Temporarily disabled
+    // alias(libs.plugins.ksp) // Temporarily disabled
     alias(libs.plugins.kotlin.serialization)
     // alias(libs.plugins.kotlin.compose) // Temporarily disabled
-    alias(libs.plugins.google.services) // Re-enabled - version 4.4.3 confirmed to exist
-    alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
-    alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
+    // alias(libs.plugins.google.services) // Temporarily disabled
+    // alias(libs.plugins.firebase.crashlytics) // Temporarily disabled
+    // alias(libs.plugins.firebase.perf) // Temporarily disabled
     alias(libs.plugins.spotless)
-    alias(libs.plugins.dokka)
-    alias(libs.plugins.openapi.generator) apply true
+    // alias(libs.plugins.dokka) // Temporarily disabled
+    // alias(libs.plugins.openapi.generator) apply true // Temporarily disabled
 }
 
-import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
+// import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
-// OpenAPI Generator codegen tasks (migrated from openapi-generator.gradle.kts)
+// OpenAPI Generator codegen tasks (migrated from openapi-generator.gradle.kts) - temporarily disabled
+/*
 val openapiSpecs = listOf(
     Triple("ai", "ai-api.yml", "dev.aurakai.auraframefx.api.ai"),
     Triple("customization", "customization-api.yml", "dev.aurakai.auraframefx.api.customization"),
@@ -35,10 +36,11 @@ openapiSpecs.forEach { (name, spec, pkg) ->
         configFile.set("${rootDir}/openapi-generator-config.json")
     }
 }
+*/
 
 android {
     namespace = "dev.aurakai.auraframefx"
-    compileSdk = 35
+    compileSdk = 34
     ndkVersion = "27.2.12479018"
     // Ensure String type
 
@@ -55,7 +57,8 @@ android {
             useSupportLibrary = true
         }
 
-        // Genesis Protocol - Native AI Processing
+        // Genesis Protocol - Native AI Processing - temporarily disabled
+        /*
         externalNativeBuild {
             cmake {
                 cppFlags += "-std=c++17"
@@ -72,6 +75,7 @@ android {
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64")
         }
+        */
     }
 
     buildTypes {
@@ -97,31 +101,35 @@ android {
 
     buildFeatures {
         compose = true
-        buildConfig = true
-        prefab = true  // For native dependencies
+        // buildConfig = true // Temporarily disabled
+        // prefab = true  // For native dependencies - temporarily disabled
     }
     
-    // Genesis Xposed/LSPosed Configuration
+    // Genesis Xposed/LSPosed Configuration - temporarily disabled
+    /*
     defaultConfig {
         // Xposed Module Configuration
         buildConfigField("boolean", "XPOSED_MODULE", "true")
         buildConfigField("String", "XPOSED_MIN_VERSION", "\"82\"")
         resValue("string", "xposed_description", "\"Genesis-OS AI Framework Hooks\"")
     }
+    */
 
-    // External Native Build - Genesis AI Processing
+    // External Native Build - Genesis AI Processing - temporarily disabled
+    /*
     externalNativeBuild {
         cmake {
             path = file("src/main/cpp/CMakeLists.txt")
             version = libs.versions.cmakeVersion.get().toString() // Ensure String type
         }
     }
+    */
 
     composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+        kotlinCompilerExtensionVersion = "1.4.8" // Compatible with Kotlin 1.8.22
     }
 
-    packaging {
+    packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
@@ -131,19 +139,24 @@ android {
         }
     }
 
-    // Add generated sources to main source set
-    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/ai/src/main/kotlin"))
-    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/customization/src/main/kotlin"))
-    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/genesis/src/main/kotlin"))
-    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/oracleDrive/src/main/kotlin"))
-    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/sandbox/src/main/kotlin"))
-    sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/system/src/main/kotlin"))
+// Temporarily disable OpenAPI source sets
+/*
+// Add generated sources to main source set
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/ai/src/main/kotlin"))
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/customization/src/main/kotlin"))
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/genesis/src/main/kotlin"))
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/oracleDrive/src/main/kotlin"))
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/sandbox/src/main/kotlin"))
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/system/src/main/kotlin"))
+*/
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildToolsVersion = "35.0.0"
+    buildToolsVersion = "34.0.0"
 }
 
+// Temporarily disable OpenAPI task dependencies
+/*
 afterEvaluate {
     tasks.findByName("preBuild")?.dependsOn(
         "generateAiApiClient",
@@ -154,6 +167,7 @@ afterEvaluate {
         "generateSystemApiClient"
     )
 }
+*/
 
 // Kotlin Toolchain - Java 21
 kotlin {
@@ -172,10 +186,10 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.androidx.navigation.compose)
 
-    // Hilt - Genesis AI Dependency Injection
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-    implementation(libs.hilt.navigation.compose)
+    // Hilt - Genesis AI Dependency Injection - temporarily disabled
+    // implementation(libs.hilt.android)
+    // ksp(libs.hilt.compiler)
+    // implementation(libs.hilt.navigation.compose)
 
     // Coroutines - Genesis Async Processing  
     implementation(libs.bundles.coroutines)
@@ -183,10 +197,10 @@ dependencies {
     // Network - Genesis Protocol Communication (includes Retrofit + Serialization)
     implementation(libs.bundles.network)
 
-    // Room Database - Genesis Memory Persistence
-    implementation(libs.room.runtime)
-    implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
+    // Room Database - Genesis Memory Persistence - temporarily disabled
+    // implementation(libs.room.runtime)
+    // implementation(libs.room.ktx)
+    // ksp(libs.room.compiler)
 
     // Utilities - Genesis Protocol Support
     implementation(libs.timber)
@@ -218,8 +232,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.hilt.android.testing)
-    kspAndroidTest(libs.hilt.compiler)
+    // androidTestImplementation(libs.hilt.android.testing)
+    // kspAndroidTest(libs.hilt.compiler)
 
     // Debug implementations
     debugImplementation(libs.androidx.compose.ui.tooling)
