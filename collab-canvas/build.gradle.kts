@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
-    alias(libs.plugins.dokka)
+    // alias(libs.plugins.dokka) // Temporarily disabled due to version conflict
     alias(libs.plugins.spotless)
 }
 
