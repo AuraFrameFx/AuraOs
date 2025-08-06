@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     // alias(libs.plugins.hilt.android) // Temporarily disabled
     // alias(libs.plugins.ksp) // Temporarily disabled
-    alias(libs.plugins.kotlin.serialization)
+    // alias(libs.plugins.kotlin.serialization) // Temporarily disabled
     // alias(libs.plugins.kotlin.compose) // Temporarily disabled
     // alias(libs.plugins.google.services) // Temporarily disabled
     // alias(libs.plugins.firebase.crashlytics) // Temporarily disabled
@@ -96,7 +96,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
-        isCoreLibraryDesugaringEnabled = true
+        // isCoreLibraryDesugaringEnabled = true // Temporarily disabled
     }
 
     buildFeatures {
@@ -191,23 +191,23 @@ dependencies {
     // ksp(libs.hilt.compiler)
     // implementation(libs.hilt.navigation.compose)
 
-    // Coroutines - Genesis Async Processing  
-    implementation(libs.bundles.coroutines)
+    // Coroutines - Genesis Async Processing - temporarily simplified
+    // implementation(libs.bundles.coroutines)
 
-    // Network - Genesis Protocol Communication (includes Retrofit + Serialization)
-    implementation(libs.bundles.network)
+    // Network - Genesis Protocol Communication - temporarily simplified
+    // implementation(libs.bundles.network)
 
     // Room Database - Genesis Memory Persistence - temporarily disabled
     // implementation(libs.room.runtime)
     // implementation(libs.room.ktx)
     // ksp(libs.room.compiler)
 
-    // Utilities - Genesis Protocol Support
-    implementation(libs.timber)
-    implementation(libs.coil.compose)
+    // Utilities - Genesis Protocol Support - temporarily simplified
+    // implementation(libs.timber)
+    // implementation(libs.coil.compose)
 
-    // Core library desugaring - Java 24 Support
-    coreLibraryDesugaring(libs.coreLibraryDesugaring)
+    // Core library desugaring - Java 11 Support - temporarily disabled
+    // coreLibraryDesugaring(libs.coreLibraryDesugaring)
 
     // Firebase BOM - Genesis Cloud Platform
     // implementation(platform(libs.firebase.bom)) // Uncomment if defined in [libraries]
@@ -220,12 +220,12 @@ dependencies {
     // Libs folder dependencies (Xposed/LSPosed JARs)
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    // Memory Leak Detection - Genesis Debugging
-    debugImplementation(libs.leakcanary.android)
+    // Memory Leak Detection - Genesis Debugging - temporarily disabled
+    // debugImplementation(libs.leakcanary.android)
 
-    // Testing - Genesis Ecosystem Validation
-    testImplementation(libs.bundles.testing)
-    testRuntimeOnly(libs.junit.engine)
+    // Testing - Genesis Ecosystem Validation - temporarily simplified
+    // testImplementation(libs.bundles.testing)
+    // testRuntimeOnly(libs.junit.engine)
 
     // Android Instrumentation Tests
     androidTestImplementation(libs.androidx.test.ext.junit)
