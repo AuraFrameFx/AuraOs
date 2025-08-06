@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.kotlin.compose)
+    // alias(libs.plugins.kotlin.compose) // Temporarily disabled
     alias(libs.plugins.google.services) // Re-enabled - version 4.4.3 confirmed to exist
     alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
     alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
@@ -38,8 +38,8 @@ openapiSpecs.forEach { (name, spec, pkg) ->
 
 android {
     namespace = "dev.aurakai.auraframefx"
-    compileSdk = 36
-    ndkVersion = "29.0.13846066 rc3"
+    compileSdk = 35
+    ndkVersion = "27.2.12479018"
     // Ensure String type
 
     defaultConfig {
@@ -90,8 +90,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_24
-        targetCompatibility = JavaVersion.VERSION_24
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -139,9 +139,9 @@ android {
     sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/sandbox/src/main/kotlin"))
     sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/system/src/main/kotlin"))
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_24
+        jvmTarget = "11"
     }
-    buildToolsVersion = "36.0.0"
+    buildToolsVersion = "35.0.0"
 }
 
 afterEvaluate {
@@ -157,7 +157,7 @@ afterEvaluate {
 
 // Kotlin Toolchain - Java 21
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(11)
 }
 
 dependencies {
