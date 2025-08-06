@@ -86,7 +86,7 @@ dependencies {
     // Utilities
     implementation(libs.timber)
     implementation(libs.coil.compose)
-
+    implementation(libs.dokka)
     // Core library desugaring - Java 24 Support
     coreLibraryDesugaring(libs.coreLibraryDesugaring)
 

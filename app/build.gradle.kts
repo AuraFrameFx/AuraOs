@@ -5,10 +5,11 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.compose)
-    // alias(libs.plugins.google.services) // Uncomment if defined in [plugins] in libs.versions.toml
-    // alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
-    // alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
+    alias(libs.plugins.google.services) // Uncomment if defined in [plugins] in libs.versions.toml
+    alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
+    alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
     alias(libs.plugins.spotless)
+    alias(libs.plugins.dokka)
     alias(libs.plugins.openapi.generator) apply true
 }
 
