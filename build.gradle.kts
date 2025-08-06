@@ -1,6 +1,6 @@
 // Genesis-OS Root Build Configuration with Documentation & Services
 plugins {
-    id("org.jetbrains.dokka") version "1.9.20" apply false // Updated Dokka plugin
+    id("org.jetbrains.dokka") version "2.0.0" apply false // Updated Dokka plugin to 2.0.0
     alias(libs.plugins.google.services) apply false
     alias(libs.plugins.spotless) apply false
     alias(libs.plugins.openapi.generator) apply true // OpenAPI Generator plugin for root scripts
