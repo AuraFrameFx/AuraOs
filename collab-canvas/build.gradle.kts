@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
-    alias(libs.plugins.dokka) apply false version "2.0.0"
+    alias(libs.plugins.dokka) apply false
     alias(libs.plugins.spotless)
 }
 
@@ -35,8 +35,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_24
+        targetCompatibility = JavaVersion.VERSION_24
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -44,10 +44,6 @@ android {
         viewBinding = true
         compose = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     externalNativeBuild {
@@ -66,9 +62,9 @@ android {
     }
 }
 
-// Kotlin Toolchain - Java 21
+// Kotlin Toolchain - Java 22
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(22)
 }
 
 dependencies {

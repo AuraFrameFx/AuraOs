@@ -40,18 +40,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_24
+        targetCompatibility = JavaVersion.VERSION_24
         isCoreLibraryDesugaringEnabled = true
     }
 
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     packaging {
@@ -70,10 +66,9 @@ android {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(22)
 
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
         freeCompilerArgs.addAll(
             "-Xuse-k2",
             "-Xskip-prerelease-check",
@@ -87,9 +82,6 @@ kotlin {
 dependencies {
     // Project modules
     implementation(project(":core-module"))
-
-    // Kotlin
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.0")
 
     // AndroidX
     implementation(libs.androidx.core.ktx)
