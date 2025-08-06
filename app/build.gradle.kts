@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.google.services) // Uncomment if defined in [plugins] in libs.versions.toml
+    alias(libs.plugins.google.services) // Re-enabled - version 4.4.3 confirmed to exist
     alias(libs.plugins.firebase.crashlytics) // Uncomment if defined in [plugins]
     alias(libs.plugins.firebase.perf) // Uncomment if defined in [plugins]
     alias(libs.plugins.spotless)
@@ -38,8 +38,9 @@ openapiSpecs.forEach { (name, spec, pkg) ->
 
 android {
     namespace = "dev.aurakai.auraframefx"
-    compileSdk = libs.versions.compileSdk.get().toInt()
-    ndkVersion = libs.versions.ndkVersion.get().toString() // Ensure String type
+    compileSdk = 36
+    ndkVersion = "29.0.13846066 rc3"
+    // Ensure String type
 
     defaultConfig {
         applicationId = "dev.aurakai.auraframefx"
@@ -89,8 +90,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_24
+        targetCompatibility = JavaVersion.VERSION_24
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -137,6 +138,10 @@ android {
     sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/oracleDrive/src/main/kotlin"))
     sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/sandbox/src/main/kotlin"))
     sourceSets["main"].java.srcDir(layout.buildDirectory.dir("generated/openapi/system/src/main/kotlin"))
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_24
+    }
+    buildToolsVersion = "36.0.0"
 }
 
 afterEvaluate {

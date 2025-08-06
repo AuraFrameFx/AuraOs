@@ -6,7 +6,7 @@
       <GradleProjectSettings>
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="temurin-24 (2)" />
+        <option name="gradleJvm" value="openjdk-24 (6)" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -20,7 +20,6 @@
             <option value="$PROJECT_DIR$/secure-comm" />
           </set>
         </option>
-        <option name="resolveExternalAnnotations" value="true" />
       </GradleProjectSettings>
     </option>
     <option name="parallelModelFetch" value="true" />
