@@ -31,6 +31,7 @@ jobs:
           set -x
 
       - name: chmod x gradlew
+        run: chmod +x ./gradlew
       
       - name: Build APK with Gradle debug
         run: |
