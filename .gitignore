@@ -30,7 +30,9 @@ build/
 
 # Root scripts and jars
 /*.bat
+!/gradlew.bat
 /*.sh
+!/gradlew
 /*.jar
 
 # Exclude generated and cache files
